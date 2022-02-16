@@ -1,0 +1,311 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 70%;
+  height: 100%;
+}
+
+main {
+  color: white;
+  position: absolute;
+  font-family: piru;
+  display: grid;
+  grid-template-columns: 50px 2fr;
+  margin-left: 4%;
+  width: 80%;
+  height: 100%;
+}
+body {
+  width: 70%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 10vh;
+}
+
+.headpiece p{
+    font-size: 5vh;
+}
+.headpiece {
+  line-break: normal;
+  margin-top: 15%;
+  grid-column: 2;
+  border: 2px solid purple;
+  width: 100%;
+  height: 70%;
+  background-color: rgba(211, 211, 211, 0.1);
+  text-shadow: 3px 3px black;
+  text-indent: 25px;
+  box-shadow: 2px 2px 1px 1px black;
+}
+.block_1 {
+  font-size: 1.8vh;
+  line-break: normal;
+  margin-top: 45%;
+  margin-bottom: 17%;
+  grid-column: 2;
+  padding: 15px;
+  line-height: 2vh;
+  text-align: left;
+  width: 70%;
+  height: 38%;
+  background-color: rgba(211, 211, 211, 0.1);
+  border: 1px solid purple;
+  text-shadow: 3px 3px black;
+  box-shadow: 2px 2px 1px 1px black;
+}
+#earth {
+  margin-left: 1200px;
+  margin-top: -280px;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(0, 0, 255, 0.5);
+
+}
+.shown {
+  transition: 2s;
+  display: grid;
+}
+
+#earth:hover{
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 200ms;
+  margin-top: -340px;
+  margin-left: 1185px;
+  width: 65px;
+  height: 100px;
+  border-radius: 10px;
+  background-image: url("estonia.png");
+  background-repeat: no-repeat;
+  background-size: 65px 100px;
+}
+
+.block_2{
+  font-size: 1.8vh;
+  line-break: normal;
+  margin-top: 50%;
+  grid-column: 2;
+  padding: 15px;
+  line-height: 2vh;
+  text-align: left;
+  width: 70%;
+  height: 30%;
+  background-color: rgba(211, 211, 211, 0.1);
+  border: 1px solid purple;
+  text-shadow: 3px 3px black;
+  box-shadow: 2px 2px 1px 1px black;
+}
+.block_2 a{
+  text-decoration: underline;
+  color: rgb(177, 231, 227);
+}
+.end{
+  margin-top: 250px;
+  width: 10px;
+  height: 10px;
+}
+
+
+.logo {
+  margin-left: 25px;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  background-size: 30px 80px;
+  position: fixed;
+  z-index: 110;
+}
+
+.navbar{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  width: 3.4%;
+  height: 100vh;
+  background-color: rgba(64, 64, 64, 0.7);
+}
+.navbar div{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 50px;
+  height: 50px;
+}
+.home {
+  border: 1px solid black;
+  background: url("home.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  transition: 200ms;
+  cursor: pointer;
+}
+.education {
+  border: 1px solid black;
+  background: url("education.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  transition: 200ms;
+  cursor: pointer;
+}
+.education:hover {
+  transition: 200ms;
+  background-color: purple;
+  width: 55px;
+  height: 55px;
+  background-size: 55px 55px;
+}
+.about {
+  border: 1px solid black;
+  background: url("about.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  transition: 200ms;
+  cursor: pointer;
+}
+.about:hover {
+  transition: 200ms;
+  background-color: purple;
+  width: 55px;
+  height: 55px;
+  background-size: 55px 55px;
+}
+.contact {
+  border: 1px solid black;
+  background: url("contact.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  transition: 200ms;
+  cursor: pointer;
+}
+.contact:hover {
+  transition: 200ms;
+  background-color: purple;
+  width: 55px;
+  height: 55px;
+  background-size: 55px 55px;
+}
+.home:hover{
+  transition: 200ms;
+  background-color: purple;
+  width: 55px;
+  height: 55px;
+  background-size: 55px 55px;
+}
+
+
+
+.homeJS {
+  border: 1px solid black;
+  background: url("home.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-color: purple;
+  transition: 200ms;
+  cursor: pointer;
+}
+.educationJS {
+  border: 1px solid black;
+  background: url("education.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-color: purple;
+  transition: 200ms;
+  cursor: pointer;
+}
+.contactJS {
+  border: 1px solid black;
+  background: url("contact.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-color: purple;
+  transition: 200ms;
+  cursor: pointer;
+}
+.aboutJS {
+  border: 1px solid black;
+  background: url("about.png");
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  background-color: purple;
+  transition: 200ms;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: piru;
+  src: url(pir.otf);
+}
+
+@media  screen and (max-width: 600px) {
+  .navbar{
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    height: 4.5%;
+    width: 100%;
+    background-color: rgba(64, 64, 64, 0.7);
+  }
+  .navbar div {
+    margin-top: 0px;
+    margin-left: 3%;
+    margin-right: 10%;
+    width: 50px;
+    height: 50px;
+  }
+
+  .block_1{
+    margin-left: 0px;
+    width: 38%;
+    height: 40%;
+    word-break: normal;
+  }
+
+  .block_2{
+    margin-left: 0px;
+    width: 38%;
+    height: 40%;
+    word-break: normal;
+  }
+
+
+  .headpiece {
+    width: 40%;
+    word-break:normal;
+  }
+  h1 {
+    font-size: 400%;
+  }
+  .headpiece p{
+    font-size: 150%;
+  }
+  main {
+    margin: 0px;
+    width: 5%;
+    color: white;
+    position: absolute;
+    display: grid;
+    grid-template-columns: none;
+    font-family: piru;
+    height: 100%;
+  }
+}
