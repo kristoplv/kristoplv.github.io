@@ -55,11 +55,10 @@ h1 {
   margin-top: 45%;
   margin-bottom: 17%;
   grid-column: 2;
-  padding: 15px;
   line-height: 3vh;
   text-align: left;
   width: 70%;
-  height: 38%;
+  height: inherit;
   background-color: rgba(211, 211, 211, 0.1);
   border: 1px solid purple;
   text-shadow: 3px 3px black;
@@ -99,11 +98,10 @@ h1 {
   line-break: normal;
   margin-top: 47%;
   grid-column: 2;
-  padding: 15px;
   line-height: 3vh;
   text-align: left;
   width: 70%;
-  height: 40%;
+  height: inherit;
   background-color: rgba(211, 211, 211, 0.1);
   border: 1px solid purple;
   text-shadow: 3px 3px black;
