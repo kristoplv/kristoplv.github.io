@@ -52,13 +52,12 @@ h1 {
   padding: 1em;
   font-size: 2.3vh;
   line-break: normal;
-  margin-top: 45%;
+  margin-top: 42%;
   margin-bottom: 17%;
   grid-column: 2;
   line-height: 3vh;
   text-align: left;
   width: 70%;
-  height: inherit;
   background-color: rgba(211, 211, 211, 0.1);
   border: 1px solid purple;
   text-shadow: 3px 3px black;
@@ -96,12 +95,11 @@ h1 {
   padding: 1em;
   font-size: 2.3vh;
   line-break: normal;
-  margin-top: 47%;
+  margin-top: 45%;
   grid-column: 2;
   line-height: 3vh;
   text-align: left;
   width: 70%;
-  height: inherit;
   background-color: rgba(211, 211, 211, 0.1);
   border: 1px solid purple;
   text-shadow: 3px 3px black;
@@ -142,7 +140,7 @@ h1 {
   height: 100vh;
   background-color: rgba(64, 64, 64, 0.7);
 }
-#b2 {
+#b3 {
   margin-top: 40%;
 }
 .navbar div{
