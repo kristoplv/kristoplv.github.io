@@ -47,7 +47,7 @@ h1 {
   box-shadow: 2px 2px 1px 1px black;
 }
 .block_1 {
-  font-size: 1.8vh;
+  font-size: 2.3vh;
   line-break: normal;
   margin-top: 45%;
   margin-bottom: 17%;
@@ -91,7 +91,7 @@ h1 {
 }
 
 .block_2{
-  font-size: 1.8vh;
+  font-size: 2.3vh;
   line-break: normal;
   margin-top: 50%;
   grid-column: 2;
