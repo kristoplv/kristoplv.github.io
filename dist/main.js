@@ -193,7 +193,7 @@ function animate(){
   if(wid > height){
     renderer.setSize(wid, height);
   } else {
-    renderer.setSize(height, wid);
+    renderer.setSize(1920, 1080);
   }
 
   renderer.render(scene, camera);
