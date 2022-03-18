@@ -188,7 +188,9 @@ function animate(){
   torus_1.rotation.z -= 0.01;
 
   icoLogo.rotation.y -= 0.005;
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  var wid = window.innerWidth;
+  var height = window.innerHeight;
+  renderer.setSize(wid, height);
   renderer.render(scene, camera);
 }
 
