@@ -274,25 +274,25 @@ h1 {
     margin-top: 0px;
     margin-left: 3%;
     margin-right: 10%;
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    aspect-ratio: 1/1;
   }
 
   .block_1{
     margin-left: 0px;
-    width: 80%;
+    width: 50%;
     word-break: normal;
   }
 
   .block_2{
     margin-left: 0px;
-    width: 80%;
+    width: 50%;
     word-break: normal;
   }
 
 
   .headpiece {
-    width: 80%;
+    width: 50%;
     word-break:normal;
   }
   h1 {
