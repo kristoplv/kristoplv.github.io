@@ -1,6 +1,6 @@
 import './style.css'
 
-import * as THREE from 'https://cdn.skypack.dev/three@<version>';
+import * as THREE from 'https://cdn.skypack.dev/three';
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 65, window.innerWidth / window.innerHeight, 0.1, 2000 );
