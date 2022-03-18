@@ -57,7 +57,7 @@ h1 {
   line-height: 3vh;
   text-align: left;
   width: 70%;
-  height: 40%;
+  height: 50%;
   background-color: rgba(211, 211, 211, 0.1);
   border: 1px solid purple;
   text-shadow: 3px 3px black;
@@ -91,11 +91,13 @@ h1 {
   background-size: 65px 100px;
 }
 
+#b2{
+  margin-top: 60%;
+}
 .block_2{
   padding: 1em;
   font-size: 2.3vh;
   line-break: normal;
-  margin-top: 45%;
   grid-column: 2;
   line-height: 3vh;
   text-align: left;
