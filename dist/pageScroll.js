@@ -4,9 +4,6 @@ let skills = document.getElementById("about");
 let education = document.getElementById("education");
 let contact = document.getElementById("contact");
 
-earth.onclick = function(){
-    window.open("https://www.visitestonia.com/en/");
-}
 window.addEventListener("scroll", function(){
     var a = window.scrollY;
     if(a > 0 && a < 600){
