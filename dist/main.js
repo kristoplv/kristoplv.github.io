@@ -190,7 +190,12 @@ function animate(){
   icoLogo.rotation.y -= 0.005;
   var wid = window.innerWidth;
   var height = window.innerHeight;
-  renderer.setSize(wid, height);
+  if(wid > height){
+    renderer.setSize(wid, height);
+  } else {
+    renderer.setSize(height, wid);
+  }
+
   renderer.render(scene, camera);
 }
 
