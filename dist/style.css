@@ -148,7 +148,7 @@ h1 {
 .navbar div{
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 2vw;
+  width: 3vw;
   aspect-ratio: 1/1;
 }
 .home {
@@ -218,7 +218,7 @@ h1 {
   border: 1px solid black;
   background: url("home.png");
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: cover;
   background-color: purple;
   transition: 200ms;
   cursor: pointer;
@@ -227,7 +227,7 @@ h1 {
   border: 1px solid black;
   background: url("education.png");
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: cover;
   background-color: purple;
   transition: 200ms;
   cursor: pointer;
@@ -236,7 +236,7 @@ h1 {
   border: 1px solid black;
   background: url("contact.png");
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: cover;
   background-color: purple;
   transition: 200ms;
   cursor: pointer;
@@ -245,7 +245,7 @@ h1 {
   border: 1px solid black;
   background: url("about.png");
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: cover;
   background-color: purple;
   transition: 200ms;
   cursor: pointer;
