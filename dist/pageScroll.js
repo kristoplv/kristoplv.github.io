@@ -3,11 +3,16 @@ let skills = document.getElementById("about");
 let education = document.getElementById("education");
 let contact = document.getElementById("contact");
 
-home.addEventListener("click", scrollToElement(home));
-skills.addEventListener("click", scrollToElement(skills));
-education.addEventListener("click", scrollToElement(education));
-contact.addEventListener("click", scrollToElement(contact));
+home.addEventListener("click", function(){
+    home.scrollIntoView({behavior: "smooth"});
+});
+skills.addEventListener("click", function(){
+    skills.scrollIntoView({behavior: "smooth"});
+});
+education.addEventListener("click", function(){
+    education.scrollIntoView({behavior: "smooth"});
+});
+contact.addEventListener("click", function(){
+    contact.scrollIntoView({behavior: "smooth"});
+});
 
-function scrollToElement(el){
-    el.scrollIntoView({behavior: "smooth"});
-}
