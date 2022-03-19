@@ -282,12 +282,15 @@ h1 {
     width: 98.5%;
     word-break: normal;
   }
+  .headpiece h2 {
+    font-size: 450%;
+  }
 
 
   .headpiece {
     text-align: center;
     margin-top: 30%;
-    width: 90%;
+    width: 95%;
     word-break:normal;
   }
   h1 {
