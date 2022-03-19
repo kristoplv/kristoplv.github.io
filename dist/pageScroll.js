@@ -3,6 +3,8 @@ var skills = document.getElementById("about");
 var education = document.getElementById("education");
 var contact = document.getElementById("contact");
 
+document.getElementById("home").onclick().scrollIntoView();
+
 home.addEventListener("click", function(){
     home.scrollIntoView();
     console.log("click works");
