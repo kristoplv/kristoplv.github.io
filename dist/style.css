@@ -267,12 +267,16 @@ h1 {
   }
 
   .block_1{
+    margin-top: 80vh;
     margin-left: 0px;
     width: 98.5%;
     height: 53%;
     word-break: normal;
   }
 
+  #b2, #b3{
+    margin-top: 80vh;
+  }
   .block_2{
     margin-left: 0px;
     width: 98.5%;
@@ -281,6 +285,8 @@ h1 {
 
 
   .headpiece {
+    text-align: center;
+    margin-top: 30%;
     width: 90%;
     word-break:normal;
   }
