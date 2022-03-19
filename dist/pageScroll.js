@@ -4,8 +4,8 @@ var education = document.getElementById("education");
 var contact = document.getElementById("contact");
 
 home.addEventListener("click", function(){
+    home.scrollIntoView();
     console.log("click works");
-    home.scrollIntoView(true);
 });
 skills.addEventListener("click", function(){
     skills.scrollIntoView({behavior: "smooth"});
