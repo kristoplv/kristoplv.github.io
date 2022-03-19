@@ -149,7 +149,6 @@ scene.add(pointLight, ambientLight);
 
 function moveCamera(){
   const t = document.body.getBoundingClientRect().top;
-  console.log(t);
 
   camera.position.z = t * -0.0375;
   camera.position.x = t * -0.002;
