@@ -21,4 +21,11 @@
         height: 10vh;
         margin-top: 8vh;
     }
+    .holder {
+        width: inherit;
+        margin-left: -2vw;
+    }
+    .styleChange1, .styleChange2, .styleChange3, .styleChange4, .styleChange5{
+        width: 14vh;
+    }
 }
