@@ -170,9 +170,6 @@ h1 {
 .education:hover {
   transition: 200ms;
   background-color: purple;
-  width: 55px;
-  height: 55px;
-  background-size: 55px 55px;
 }
 .about {
   border: 1px solid black;
@@ -185,9 +182,6 @@ h1 {
 .about:hover {
   transition: 200ms;
   background-color: purple;
-  width: 55px;
-  height: 55px;
-  background-size: 55px 55px;
 }
 .contact {
   border: 1px solid black;
@@ -200,16 +194,10 @@ h1 {
 .contact:hover {
   transition: 200ms;
   background-color: purple;
-  width: 55px;
-  height: 55px;
-  background-size: 55px 55px;
 }
 .home:hover{
   transition: 200ms;
   background-color: purple;
-  width: 55px;
-  height: 55px;
-  background-size: 55px 55px;
 }
 
 

@@ -1,9 +1,10 @@
-let home = document.getElementById("home");
-let skills = document.getElementById("about");
-let education = document.getElementById("education");
-let contact = document.getElementById("contact");
+var home = document.getElementById("home");
+var skills = document.getElementById("about");
+var education = document.getElementById("education");
+var contact = document.getElementById("contact");
 
 home.addEventListener("click", function(){
+    console.log("click works");
     home.scrollIntoView({behavior: "smooth"});
 });
 skills.addEventListener("click", function(){
