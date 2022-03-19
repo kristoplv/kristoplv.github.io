@@ -1,6 +1,3 @@
-import { HemisphereLightProbe } from "three";
-import { SmoothShading } from "three";
-
 let home = document.getElementById("home");
 let skills = document.getElementById("about");
 let education = document.getElementById("education");
