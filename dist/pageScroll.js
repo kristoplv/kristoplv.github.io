@@ -5,7 +5,7 @@ var contact = document.getElementById("contact");
 
 home.addEventListener("click", function(){
     console.log("click works");
-    home.scrollIntoView();
+    home.scrollIntoView(true);
 });
 skills.addEventListener("click", function(){
     skills.scrollIntoView({behavior: "smooth"});
