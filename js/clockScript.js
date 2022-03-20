@@ -14,7 +14,7 @@ function moveLegs(){
         }
     }
     if(h>20 || h<7){
-        canvas.style.backgroundImage = 'url("/pictures/night_pic.png")';
+        canvas.style.backgroundImage = 'url("/pictures/night_pic.jpg")';
     }
     console.log(h);
 
