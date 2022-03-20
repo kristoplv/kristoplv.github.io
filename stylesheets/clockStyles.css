@@ -82,6 +82,7 @@ body, html {
     transition: 300ms;
 }
 .side{
+    margin-bottom: 1vh;
     justify-content: center;
     position: relative;
     border: 0.1em solid rgba(0,0,0.9);
