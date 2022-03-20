@@ -5,10 +5,10 @@ var prevSong = document.getElementById("prev");
 var songCounter = 0;
 var playCounter = 0;
 
-var song1 = new Audio("/music/Kisnou - Invictus.mp3");
-var song2 = new Audio("/music/Ori, Lost In the Storm.mp3");
+var song1 = new Audio("/music/omega.mp3");
+var song2 = new Audio("/music/perspectives.mp3");
 var songs = [song1, song2];
-var songNames = ["Kisnou - Invictus", "Ori, Lost In the Storm"];
+var songNames = ["Koi discovery - Omega", "7OOP3D - Perspectives"];
 
 
 
