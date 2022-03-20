@@ -1,7 +1,7 @@
 @media screen and (max-width: 1000px) {
     .side {
         margin-right: 0;
-        margin-top: 10%;
+        margin-top: 30%;
         width: 95%;
         justify-self: center;
     }
@@ -16,7 +16,7 @@
         height: 4vh;
     }
     .change {
-        width: 50%;
+        width: 80%;
         padding: 0.3em;
         height: 10vh;
         margin-top: 8vh;
@@ -25,7 +25,10 @@
         width: inherit;
         margin-left: -2vw;
     }
-    .styleChange1, .styleChange2, .styleChange3, .styleChange4, .styleChange5{
+    .styleChange, .styleChange1, .styleChange2, .styleChange3, .styleChange4, .styleChange5{
         width: 14vh;
+    }
+    .circle{
+        width: 90vw;
     }
 }

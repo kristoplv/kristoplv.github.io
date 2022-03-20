@@ -3,7 +3,7 @@ var songName = document.getElementById("song_name");
 var nextSong = document.getElementById("next");
 var prevSong = document.getElementById("prev");
 var songCounter = 0;
-var playCounter = 1;
+var playCounter = 0;
 
 var song1 = new Audio("/music/Kisnou - Invictus.mp3");
 var song2 = new Audio("/music/Ori, Lost In the Storm.mp3");
