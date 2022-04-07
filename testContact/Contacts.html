@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="stylesheets/contactForm.css">
+    <script src="js/contactForm.js" defer></script>
+  </head>
+  <body>
+    <canvas class="bg_pic"></canvas>
+    <!-- Here comes the head slider -->
+    <div class="slider">
+      <div class="logo"></div>
+      /
+        <a href="https://www.youtube.com/" id="homePage">Avaleht</a>
+        /
+        <a href="https://www.youtube.com/" id="team">Liikmed</a>
+        /
+        <a href="https://www.youtube.com/" id="contactLink">Võta ühendust</a>
+    </div>
+    <!-- Here ends the head slider -->
+    <div class="contact_us"><p><b>Võta meiega ühendust!</b></p></div>
+    <container class="form" id="contactForm">
+      <div class="name_info">
+        <label for="first_name"><b>Eesnimi:</b></label>
+        <input type="text" name="first_name" id="fName" class="names">
+        <label for="last_name"><b>Perekonnanimi:</b></label>
+        <input type="text" name="last_name" id="lName" class="names">
+      </div>
+      <div class="additional_inf">
+        <label for="phone_number"><b>Telefoninumber:</b></label>
+        <input type="tel" name="phone_number" id="telephone" value="+372" class="additional">
+        <label for="email"><b>E-posti aadress:</b></label>
+        <input type="email" name="email" id="email" class="additional">
+      </div>
+      <div class="message_text">
+
+        <label for="message"><b>Sõnum:</b></label>
+        <textarea name="message" id="message" cols="10" rows="10"></textarea>
+      </div>
+      <input type="submit" value="Saada sõnum" class="sendBtn" id="sendBtn">
+    </container>
+  </body>
+</html>
