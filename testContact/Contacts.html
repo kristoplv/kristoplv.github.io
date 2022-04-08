@@ -47,22 +47,22 @@
         $("#sendBtn").click(function(){
           if(!$("#fName").val()){
             errorNotice++;
-            $("contactForm").append("<p>Eesnimi pole sisestatud!</p>");
+            $("<p>Eesnimi pole sisestatud!</p>").appendTo("#contactForm");
           }
           if(!$("#lName").val()){
             errorNotice++;
-            $("contactForm").append("<p>Perekonnanimi pole sisestatud!</p>");
+            $("<p>Perekonnanimi pole sisestatud!</p>").appendTo("#contactForm");
           }
           if(!$("#email").val()){
             errorNotice++;
-            $("contactForm").append("<p>E-posti aadress on vale!</p>");
+            $("<p>E-posti aadress on vale!</p>").appendTo("#contactForm");
           }
           if(!$("#message").val()){
             errorNotice++;
-            $("contactForm").append("<p>Sõnumit pole sisestatud!</p>");
+            $("<p>Sõnumit pole sisestatud!</p>").appendTo("#contactForm");
           }
           if(errorNotice == 0){
-            $("contactForm").append("<p>Sõnum edukalt saadetud. Võtame Teiega peatselt ühendust!</p>");
+            $("<p>Sõnum saadetud! Võtame Teiega peatselt ühendust.</p>").appendTo("#contactForm");
           }
         });
       </script>
