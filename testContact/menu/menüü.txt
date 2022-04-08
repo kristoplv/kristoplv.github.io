@@ -1,0 +1,18 @@
+css:
+.slider{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    z-index: 1;
+    padding: 0;
+    border: 0;
+    top:0;
+    left:0;
+    height: inherit;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+html:
+<div class="slider">
