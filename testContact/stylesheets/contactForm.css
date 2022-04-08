@@ -103,7 +103,7 @@ canvas{
     left:0;
     height: inherit;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.445);
 }
 a{
     transition: 500ms;
