@@ -54,13 +54,13 @@
             errorNotice++;
             $("<p>Perekonnanimi pole sisestatud!</p>").appendTo("#contactForm");
           }
-          if(!pattern.test($("#email").val())){
-            errorNotice++;
-            $("<p>E-posti aadress on vale!</p>").appendTo("#contactForm");
-          }
           if(!pattern.test($("#telephone").val())){
             errorNotice++;
             $("<p>telefoni number on vale!</p>").appendTo("#contactForm");
+          }
+          if(!pattern.test($("#email").val())){
+            errorNotice++;
+            $("<p>E-posti aadress on vale!</p>").appendTo("#contactForm");
           }
           if(!$("#message").val()){
             errorNotice++;
