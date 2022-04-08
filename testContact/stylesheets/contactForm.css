@@ -103,12 +103,12 @@ canvas{
     left:0;
     height: inherit;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.445);
+    background-color: rgba(0, 0, 0, 0.425);
 }
 a{
     transition: 500ms;
     text-decoration: none;
-    background-color: rgb(36, 35, 35);
+    background-color: rgba(36, 35, 35, 0.5);
     text-shadow: 2px 2px black;
     color: white;
     padding: 0.3em;
