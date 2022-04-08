@@ -16,3 +16,11 @@ css:
 
 html:
 <div class="slider">
+<div class="logo"></div>
+      /
+        <a href="https://www.youtube.com/" id="homePage">Avaleht</a>
+        /
+        <a href="https://www.youtube.com/" id="team">Liikmed</a>
+        /
+        <a href="https://www.youtube.com/" id="contactLink">Võta ühendust</a>
+    </div>
