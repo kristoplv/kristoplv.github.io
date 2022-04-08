@@ -41,6 +41,16 @@
         <textarea name="message" id="message" cols="10" rows="10"></textarea>
       </div>
       <input type="submit" value="Saada sõnum" class="sendBtn" id="sendBtn">
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <script>
+        $("#sendBtn").click(function(){
+          if($("fName").val() == 0 || $("fName").val() == ""){
+            $("contactForm").add("Eesnimi pole sisestatud!");
+          } else{
+            console.log("worko");
+          }
+        });
+      </script>
     </container>
   </body>
 </html>
