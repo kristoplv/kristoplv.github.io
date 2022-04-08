@@ -43,11 +43,23 @@
       <input type="submit" value="Saada sõnum" class="sendBtn" id="sendBtn">
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <script>
+        var errorNotice = 0;
         $("#sendBtn").click(function(){
           if(!$("#fName").val()){
-            $("contactForm").add("<p>Eesnimi pole sisestatud!</p>");
-          } else{
-            console.log("worko");
+            errorNotice++;
+            $("contactForm").html("<p>Eesnimi pole sisestatud!</p>");
+          }
+          if(!$("#lName").val()){
+            errorNotice++;
+            $("contactForm").html("<p>perekonnanimi pole sisestatud!</p>");
+          }
+          if(!$("#email").val()){
+            errorNotice++;
+            $("contactForm").html("<p>Eesnimi pole sisestatud!</p>");
+          }
+          if(!$("#message").val()){
+            errorNotice++;
+            $("contactForm").html("<p>Eesnimi pole sisestatud!</p>");
           }
         });
       </script>
