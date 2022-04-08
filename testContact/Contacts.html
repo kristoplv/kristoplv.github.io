@@ -45,6 +45,7 @@
       <script>
         var errorNotice = 0;
         var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+        var phoneNumberPattern = /^[0-9-+]+$/;
         $("#sendBtn").click(function(){
           if(!$("#fName").val()){
             errorNotice++;
@@ -54,7 +55,7 @@
             errorNotice++;
             $("<p>Perekonnanimi pole sisestatud!</p>").appendTo("#contactForm");
           }
-          if(!pattern.test($("#telephone").val())){
+          if(!phoneNumberPattern.test($("#telephone").val())){
             errorNotice++;
             $("<p>telefoni number on vale!</p>").appendTo("#contactForm");
           }
