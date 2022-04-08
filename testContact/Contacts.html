@@ -51,15 +51,18 @@
           }
           if(!$("#lName").val()){
             errorNotice++;
-            $("contactForm").html("<p>perekonnanimi pole sisestatud!</p>");
+            $("contactForm").html("<p>Perekonnanimi pole sisestatud!</p>");
           }
           if(!$("#email").val()){
             errorNotice++;
-            $("contactForm").html("<p>Eesnimi pole sisestatud!</p>");
+            $("contactForm").html("<p>E-posti aadress on vale!</p>");
           }
           if(!$("#message").val()){
             errorNotice++;
-            $("contactForm").html("<p>Eesnimi pole sisestatud!</p>");
+            $("contactForm").html("<p>Sõnumit pole sisestatud!</p>");
+          }
+          if(errorNotice == 0){
+            $("contactForm").html("<p>Sõnum edukalt saadetud. Võtame Teiega peatselt ühendust!</p>");
           }
         });
       </script>
