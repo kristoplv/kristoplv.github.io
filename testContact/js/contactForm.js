@@ -1,4 +1,4 @@
-var firstName = document.querySelector("#fName");
+/*var firstName = document.querySelector("#fName");
 var lastName = document.querySelector("#lName");
 var telephone = document.querySelector("#telephone");
 var email = document.querySelector("#email");
@@ -26,4 +26,5 @@ send.addEventListener("click", function(){
         notice = "<p>Sõnum edukalt saadetud!</p>"
     }
     mainContainer.innerHTML += notice;
-});
+});*/
+
