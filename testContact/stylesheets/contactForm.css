@@ -17,7 +17,7 @@ body{
     padding: 2em;
     display: grid;
     width: 60%;
-    height: 95%;
+    height: 110%;
     background-color: rgba(112, 112, 112, 0.7);
     border-radius: 1em;
     justify-self: center;
@@ -40,7 +40,7 @@ body{
     border-radius: 0.2em;
     font-size: 1em;
     margin-bottom: 0.5em;
-    height: 18%;
+    height: 20%;
 }
 
 .message_text{
