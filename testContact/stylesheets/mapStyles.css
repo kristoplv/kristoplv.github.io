@@ -3,7 +3,8 @@
     justify-self: center;
     justify-content: center;
     color: white;
-    font-size: 1em;
+    text-shadow: 2px 2px black;
+    font-size: 2em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 30%;
     width: 40%;
