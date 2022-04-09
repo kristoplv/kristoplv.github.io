@@ -16,6 +16,7 @@
     position: relative;
     height: inherit;
     width: 100%;
+    margin-top: 10vh;
 }
 .newHolder{
     margin-left: 1vh;
