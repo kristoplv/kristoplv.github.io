@@ -67,6 +67,8 @@ a:hover#homePage, a:hover#team, a:hover#contactLink{
     flex: 1;
     height: 50vh;
     padding-top: 5%;
+    animation-duration: 1.5s;
+    animation-name: popOutTabs;
 }
 
 #description, #difficulties, #github, #calculator {
@@ -77,8 +79,6 @@ a:hover#homePage, a:hover#team, a:hover#contactLink{
     background-color: #899878d0;
     border-radius: 0.4em;
     box-shadow: 2px 2px 2px black;
-    animation-duration: 1.5s;
-    animation-name: popOutTabs;
 }
 
 body {
