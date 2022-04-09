@@ -75,7 +75,7 @@ a:hover#homePage, a:hover#team, a:hover#contactLink{
     margin: 1%;
     padding: 1%;
     background-color: #899878;
-    border-radius: 1em;
+    border-radius: 0.4em;
     box-shadow: 2px 2px 2px black;
     animation-duration: 3s;
     animation-name: popOutTabs;
@@ -101,6 +101,6 @@ a {
         margin-top: 100vh;
     }
     to{
-        margin-top: 0;
+        margin-top: 1%;
     }
 }
