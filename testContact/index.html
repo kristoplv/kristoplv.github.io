@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Avaleht</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="logo"></div>
+        /
+        <a href="https://kristoplv.github.io/testContact/index.html" id="homePage">Avaleht</a>
+        /
+        <a href="https://kristoplv.github.io/testContact/team.html" id="team">Liikmed</a>
+        /
+        <a href="https://kristoplv.github.io/testContact/Contacts.html" id="contactLink">Võta ühendust</a>
+    </div>
+    <div id="container">
+        <div id="description">
+            <h2>Ülesande kirjeldus</h2>
+            <p>Leidke endale tiim 2-4 liiget, võib ka üksi teha, kui kedagi ei leia.<br><br>
+                Tehke sellest repositooriumist fork ja laadige töö GitHub'i üles.<br><br>
+                Võite leida erinevaid alternatiive, et kuidas koodi koos kirjutada, 
+                aga üks võimalus on installida VS Code'ile laiendus 
+                <a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare" 
+                target="_blank">Live Share</a>.<br><br>
+                Looge oma tiimile veebileht, kus on vähemalt kolm lehte: 
+                avaleht, tiimileht ja kontaktileht.
+            </p>
+        </div>
+        <div id="difficulties">
+            <h2>Tehtud ülesanded</h2>
+            <ul>
+                <li>Avaleht</li>
+                <li>Tiimileht</li>
+                <li>Kontaktileht</li>
+                <li>Üldine</li>
+            </ul>
+            <h2>Mis osutus raskeks</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br> 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+        <div id="github">
+            <h2>Tiim</h2>
+            <a href="https://github.com/">GitHub'i repositoorium</a>
+            <ul>
+                <li>Robin Kukke</li>
+                <li>Kristo Põlluvee</li>
+                <li>Germo Mäenurm</li>
+                <li>Christian-Enrique Hindremäe</li>
+            </ul>
+        </div>
+        <div id="calculator">
+            <h2>Pensionini jäänud aastate kalkulaator</h2>
+            <input type="radio" name="gender" id="male" value="male" checked>
+            <label for="male">Mees</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Naine</label><br><br>
+            <input type="range" min="0" max="100" name="slider" id="slider"><br><br>
+            <div id="currentValue"></div><br>
+            <button id="calculateBtn">Arvuta</button><br><br>
+            <div id="resultValue"></div>
+        </div>
+    </div>
+</body>
+</html>
