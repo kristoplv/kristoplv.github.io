@@ -7,6 +7,8 @@
     <title>Vite App</title>
     <link rel="stylesheet" href="stylesheets/contactForm.css">
     <script src="js/contactForm.js" defer></script>
+    <script src="js/mapScript.js"></script>
+    <link rel="stylesheet" href="mapStyles.css">
   </head>
   <body>
     <canvas class="bg_pic"></canvas>
@@ -73,5 +75,10 @@
         });
       </script>
     </container>
+    <div class="maps" id="map"></div>
+    <script>
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly"
+      async
+    </script>
   </body>
 </html>
