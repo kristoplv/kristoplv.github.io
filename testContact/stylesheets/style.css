@@ -27,7 +27,7 @@ a:visited#homePage, a:visited#team, a:visited#contactLink{
     color: white;
 }
 .logo{
-    background-image: url("pictures/thingo.gif");
+    background-image: url("../pictures/thingo.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
