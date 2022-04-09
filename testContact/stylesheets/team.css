@@ -2,6 +2,11 @@ caption, p {
     color: rgb(255, 255, 255);
     text-shadow: 2px 3px rgb(0, 0, 0);
 }
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../pictures/contactPic.jpg");
+}
 
 h2 {
     text-shadow: 5px 2px black;
