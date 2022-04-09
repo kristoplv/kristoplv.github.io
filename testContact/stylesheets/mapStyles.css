@@ -1,5 +1,5 @@
 #map{
-    margin-top: 20vh;
+    margin-top: 25vh;
     justify-self: center;
     justify-content: center;
     color: white;
@@ -7,7 +7,6 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 30%;
     width: 40%;
-    background-color: rgba(36, 35, 35, 0.5);
 }
 .teamContacts{
     background-color: rgba(36, 35, 35, 0.5);
