@@ -12,6 +12,28 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.425);
 }
+canvas{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../pictures/contactPic.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation-duration: 2s;
+    animation-name: writemain;
+    z-index: -1;
+}
+@keyframes writemain {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 a#homePage, a#team, a#contactLink{
     transition: 500ms;
     text-decoration: none;
@@ -53,6 +75,10 @@ a:hover#homePage, a:hover#team, a:hover#contactLink{
     margin: 1%;
     padding: 1%;
     background-color: #899878;
+    border-radius: 1em;
+    box-shadow: 2px 2px 2px black;
+    animation-duration: 3s;
+    animation-name: popOutTabs;
 }
 
 body {
@@ -69,4 +95,12 @@ a {
     /*text-decoration: none;*/
     font-weight: bold;
     color: black;
+}
+@keyframes popOutTabs{
+    from{
+        margin-top: 100vh;
+    }
+    to{
+        margin-top: 0;
+    }
 }
