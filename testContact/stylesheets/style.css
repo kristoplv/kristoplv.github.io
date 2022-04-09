@@ -65,7 +65,6 @@ a:hover#homePage, a:hover#team, a:hover#contactLink{
     display: flex;
     align-items: stretch;
     flex: 1;
-    height: 50vh;
     padding-top: 5%;
     animation-duration: 1.5s;
     animation-name: popOutTabs;
