@@ -1,4 +1,6 @@
 #map{
+    margin-top: 10vh;
+    justify-self: center;
     height: 30%;
     width: 40%
 }
@@ -15,7 +17,7 @@
     left:0;
     position: relative;
     height: inherit;
-    width: 100%;
+    width: 95%;
     margin-top: 10vh;
 }
 .newHolder{
