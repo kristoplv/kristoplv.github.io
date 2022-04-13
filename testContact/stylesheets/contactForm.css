@@ -163,3 +163,12 @@ a:hover{
         opacity: 1;
     }
 }
+
+@media screen and (max-width: 999px){
+    #contactForm{
+        width: 100%;
+        height: 45%;
+    }
+
+    
+}

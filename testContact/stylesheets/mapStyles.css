@@ -28,3 +28,9 @@
 .newHolder{
     margin-left: 1vh;
 }
+@media screen and (max-width: 999px) {
+    #map{
+        justify-self: left;
+        padding: 1em;
+    }
+}
