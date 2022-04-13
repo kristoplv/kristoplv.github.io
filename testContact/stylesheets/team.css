@@ -152,7 +152,7 @@ a:hover{
     }
 }
 @media screen and (max-width: 999px) {
-    #teamSlider{
+    #teamMember{
         justify-self:center;
         margin: 0;
     }
