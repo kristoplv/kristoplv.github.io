@@ -165,11 +165,8 @@ a:hover{
 }
 
 @media screen and (max-width: 999px){
-    body{
-        padding: 1em;
-    }
     #contactForm{
-        width: 100%;
+        width: 90%;
         height: inherit;
     }
 
