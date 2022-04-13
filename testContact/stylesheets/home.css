@@ -70,3 +70,11 @@ a {
     font-weight: bold;
     color: black;
 }
+@media screen and (max-width: 999px) {
+    #container{
+        flex-direction: column;
+    }
+    a#homePage, a#team, a#contactLink{
+        font-size: 1.5em;
+    }
+}
