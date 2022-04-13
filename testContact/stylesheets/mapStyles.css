@@ -32,5 +32,7 @@
     #map{
         justify-self: left;
         padding: 1em;
+        width: 60%;
+        height: 60%;
     }
 }
