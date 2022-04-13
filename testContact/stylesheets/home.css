@@ -72,6 +72,7 @@ a {
 }
 @media screen and (max-width: 999px) {
     #container{
+        display:flex;
         flex-direction: column;
     }
     a#homePage, a#team, a#contactLink{
