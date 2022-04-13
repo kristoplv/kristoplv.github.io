@@ -105,3 +105,12 @@ a {
         margin-top: 0;
     }
 }
+@media screen and (max-width: 999px) {
+    #container{
+        display:flex;
+        flex-direction: column;
+    }
+    a#homePage, a#team, a#contactLink{
+        font-size: 1.5em;
+    }
+}
