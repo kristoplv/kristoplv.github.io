@@ -114,4 +114,7 @@ a {
     a#homePage, a#team, a#contactLink{
         font-size: 1.5em;
     }
+    .logo{
+        display: none;
+    }
 }

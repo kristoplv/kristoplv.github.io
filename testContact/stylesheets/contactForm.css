@@ -175,6 +175,9 @@ a:hover{
     .contact_us p{
         font-size: 2.5em;
     }
+    .logo{
+        display: none;
+    }
 
     
 }
