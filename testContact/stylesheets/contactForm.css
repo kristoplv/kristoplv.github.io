@@ -169,6 +169,9 @@ a:hover{
         width: 90%;
         height: inherit;
     }
+    .slider #a{
+        font-size: 1.5em;
+    }
 
     
 }
