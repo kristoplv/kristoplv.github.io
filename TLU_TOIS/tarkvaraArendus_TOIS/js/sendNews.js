@@ -29,7 +29,7 @@ function main(){
     var item_1 = getValues("TOIS/vorm/vormid/id/")
     var item_2 = getValues("TOIS/vorm/vormid/name/")
     var item_3 = getValues("TOIS/vorm/vormid/time/")
-    sleep(500).then(()=>{
+    sleep(800).then(()=>{
         console.log(item_1.length)
         for(var i=0; i<item_1.length; i++){
             console.log(thingy);
