@@ -1,3 +1,7 @@
+import {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} from '../js/cookies'
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+import {getDatabase, ref, push, set, onValue} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
+
 var email = document.querySelector("#email");
 var pw = document.querySelector("#password");
 var pwLogo = document.querySelector(".password_logo");
@@ -35,10 +39,6 @@ function setRememberMeStatus(){
 var testMeil = async () => { return await onValue(EmailTester, testEmailInput)}
 var testPassw = async () => { return await onValue(passwordTester, testPasswordInput)}
 
-import {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} from '../js/cookies'
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-import {getDatabase, ref, push, set, onValue} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
 // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
