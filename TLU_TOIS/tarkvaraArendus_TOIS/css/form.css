@@ -153,15 +153,6 @@ input[type="text"], select, textarea, input:disabled, input[type="number"], inpu
     border-radius: 3px;
 }
 
-
-@keyframes animatsioon{
-    from{
-        opacity: 0%;
-    }
-    to{
-        opacity: 100%;
-    }
-}
 .formBtn {
     width: 20%;
     font-size: 24px;
@@ -182,6 +173,15 @@ input[type="text"], select, textarea, input:disabled, input[type="number"], inpu
     animation-name: flushButton_in;
     animation-duration: 300ms;
     background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 100%, white);
+}
+
+@keyframes animatsioon{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
 }
 
 @keyframes flushButton_in{

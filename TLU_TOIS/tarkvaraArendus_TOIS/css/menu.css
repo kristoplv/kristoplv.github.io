@@ -42,7 +42,6 @@
     left: 50%;
     transform: translateX(-50%) translateY(60%);
 }
-
 .ribbon{
     width: 100%;
     aspect-ratio: 8/1;
@@ -62,9 +61,7 @@
     border-right: 0.1vw solid black;
     transition: 300ms;
     box-shadow: 1px 1px 5px black;
-
 }
-
 .home_logo{
     background-image: url("../images/TOISlogo.png");
     background-repeat: no-repeat;
@@ -75,7 +72,6 @@
 #Logo:hover{
     background-color: white;
 }
-
 .item:hover{
     transition: 300ms;
     background-color: #dddddd

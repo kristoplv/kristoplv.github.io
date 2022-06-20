@@ -8,7 +8,3 @@ btn.addEventListener("click", ()=>{
         dropper.className = "nahtaval";
     }
 });
-
-
-
-

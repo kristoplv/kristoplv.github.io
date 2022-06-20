@@ -1,9 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import {getDatabase, ref, push, set, onValue, get, child} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
-
-
-
 const firebaseConfig = {
     apiKey: "AIzaSyA68-WRoXzWuFYJQf0t-txxMq4E749arpQ",
     authDomain: "igplatvormid.firebaseapp.com",
@@ -29,7 +26,7 @@ function main(){
     var item_1 = getValues("TOIS/vorm/vormid/id/")
     var item_2 = getValues("TOIS/vorm/vormid/name/")
     var item_3 = getValues("TOIS/vorm/vormid/time/")
-    sleep(800).then(()=>{
+    sleep(500).then(()=>{
         console.log(item_1.length)
         for(var i=0; i<item_1.length; i++){
             console.log(thingy);
@@ -37,8 +34,6 @@ function main(){
         }
     })
 }
-
-
 
 function getValues(baseRef){
     var retVal = [];

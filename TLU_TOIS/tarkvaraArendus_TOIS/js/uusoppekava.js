@@ -17,10 +17,6 @@ const db= getDatabase();
 const loc = ref(db, "TOIS/vorm/auth/");
 var reffer = "";
 
-
-
-
-
 window.onload = function() {
     let courseCreationDate = document.querySelector('#courseCreationDate');
     let date = new Date();
@@ -59,8 +55,14 @@ function generateLink() {
     let courseLink = document.querySelector('#courseLink');
     
     buttonId.style.display = 'none';
-    courseLink.innerHTML = '<a class="linkBtn" id="linkBtn" href="form.html?id=' + linkId + '">Link uue õppekava täitmiseks</a>';
-    courseLink.innerHTML += '<img id="copyLink" src="images/link.png" alt="Kopeeri" title="Kopeeri" onclick="copyLink()">';
+    if(window.localStorage.getItem('lang') == "EE"){
+        courseLink.innerHTML = '<a class="linkBtn" id="linkBtn" href="form.html?id=' + linkId + '">Link uue õppekava täitmiseks</a>';
+        courseLink.innerHTML += '<img id="copyLink" src="images/link.png" alt="Kopeeri" title="Kopeeri" onclick="copyLink()">';
+    } else if(window.localStorage.getItem('lang') == "EN"){
+        courseLink.innerHTML = '<a class="linkBtn" id="linkBtn" href="formEng.html?id=' + linkId + '">Link for filling new curriculum</a>';
+        courseLink.innerHTML += '<img id="copyLink" src="images/link.png" alt="Copy" title="Copy" onclick="copyLink()">';
+    }
+    
 
     let newFormHashmap = new Map([
         ['id', linkId],
@@ -83,8 +85,6 @@ function generateLink() {
         [linkId] : courseFiller
     });
 
-
-    
 }
 
 function copyLink() {

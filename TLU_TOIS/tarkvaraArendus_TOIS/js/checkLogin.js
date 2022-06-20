@@ -119,7 +119,7 @@ function checkForValues(){
     if(notice == ""){
         testMeil()
         testPassw()
-        sleep(300).then(()=>{
+        sleep(100).then(()=>{
             console.log(emailCheck);
             console.log(pwCheck);
             return NotificationSystem(notice);

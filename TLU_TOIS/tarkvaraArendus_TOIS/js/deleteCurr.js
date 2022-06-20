@@ -47,7 +47,7 @@ function getInfo(){
     getFirebaseItem(name_ref, id, superList)
     getFirebaseItem(desc_ref, id, superList)
     getFirebaseItem(status_ref, id, superList)
-    sleep(800).then(()=>{
+    sleep(100).then(()=>{
         for(var i=0; i<idList.length; i++){
             var listChild = "<td>"+superList[i]+"</td>"
             idList[i].innerHTML += listChild;
@@ -92,5 +92,4 @@ function returnToList(){
 }
 
 btn_yes.addEventListener("click", deleteCurr);
-
 btn_no.addEventListener("click", returnToList);
