@@ -2,6 +2,8 @@ import {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import {getDatabase, ref, push, set, onValue} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
+
+console.log("hi");
 var email = document.querySelector("#email");
 var pw = document.querySelector("#password");
 var pwLogo = document.querySelector(".password_logo");
