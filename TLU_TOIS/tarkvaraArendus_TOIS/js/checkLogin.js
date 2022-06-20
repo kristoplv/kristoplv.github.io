@@ -1,4 +1,4 @@
-//dimport {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} from '../js/cookies'
+import {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} from '/cookies.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import {getDatabase, ref, push, set, onValue} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
