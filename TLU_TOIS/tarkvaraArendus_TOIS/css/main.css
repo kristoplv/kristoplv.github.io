@@ -34,7 +34,7 @@ p{
 .mainContainer{
     top: 0;
     left: 0;
-    /* position: absolute; */
+    position: absolute; 
     display: grid;
     grid-template-columns: 15% 70% 15%;
     width: 100%;
