@@ -1,4 +1,4 @@
-import {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} from 'TLU_TOIS/tarkvaraArendus_TOIS/js/cookies.js'
+import {setRememberMeCookie, deleteRememberMeCookie, storeData, loadSavedLogin} from '/TLU_TOIS/tarkvaraArendus_TOIS/js/cookies.js'
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
 import {getDatabase, ref, push, set, onValue} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
 
