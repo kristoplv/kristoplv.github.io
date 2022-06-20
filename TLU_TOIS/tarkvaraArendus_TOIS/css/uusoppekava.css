@@ -1,0 +1,62 @@
+.newCourseArea {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+label {
+    font-size: 1vw;
+}
+
+input[type="text"] {
+    width: 15%;
+    font-size: 20px;
+    margin-left: 0.5em;
+    font-family: 'Times New Roman', Times, Georgia, serif;
+    letter-spacing: 1px;
+}
+
+.inputField {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.btn {
+    width: 20%;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#dateField {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#linkField {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+.linkBtn {
+    font-weight: 600;
+    color: #ba0c2f;
+}
+
+.linkBtn:hover {
+    color: #d44562;
+}
+
+
+#copyLink {
+    height: 15px;
+    cursor: pointer;
+    padding-left: 0.5em;
+}

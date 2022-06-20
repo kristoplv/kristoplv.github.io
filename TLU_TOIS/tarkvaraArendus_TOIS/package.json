@@ -1,0 +1,18 @@
+{
+  "name": "tarkvaraarendus-tois",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "firebase": "^9.8.2",
+    "jquery": "^3.6.0",
+    "require": "^0.4.4"
+  }
+}

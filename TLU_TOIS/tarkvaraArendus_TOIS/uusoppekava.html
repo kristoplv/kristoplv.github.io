@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/toisFavicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/uusoppekava.css">
+    <script type="module" src="js/uusoppekava.js" defer></script>
+    <script src="js/ribbon.js" defer></script>
+    <script type="module" src="js/navigation.js" defer></script>
+    <script type="module" src="js/lang.js"></script>
+    <script type="module" src="js/loginStatus.js" defer></script>
+    <title>TLÜ TÕIS</title>
+</head>
+<body>
+    <div id="mainContainer" class="mainContainer">
+        <a href="main.html" class="logo"></a>
+
+        <div id="loginArea" class="login">
+            <div id="welcomePlaceholder"></div>          
+            <a href="login.html" class="loginButton" id="logIn">Logi sisse</a>
+        </div>
+
+        <div id="sidebar" class="sidebar">
+            <h2 class="menuLabel">MENÜÜ</h2>
+            <ul id="navMenu" class="navMenu">
+                <li>
+                    <a href="main.html" class="links sides" id="homePage">Avaleht</a>
+                </li>
+                <li>
+                    <a href="oppekavad.html" class="links sides" id="allForms">Kõik õppekavad</a>
+                </li>
+                <li>
+                    <a href="uusoppekava.html" class="links sides" id="newForm">Loo uus õppekava</a>
+                </li>
+                <a href="uusoppekava.html" id="langEE"><img src="images/eestilipp.png" title="Eesti keel" class="estFlag"></a>
+                <a href="uusoppekavaEng.html" id="langEN"><img src="images/uklipp.png" title="Inglise keel" class="ukFlag"></a>
+            </ul>
+        </div>
+
+        <container class="ribbon">
+            <a class="home_logo item a" id="Logo" href="index.html"><p class="menu-text"></p></a>
+            <div class="menuBtn" id="menu"></div>
+        </container>
+        <div class="peidus" id="dropped">
+            <p1 class="item login_txt"><a href="main.html">Avaleht</a></p1>
+            <p1 class="item login_txt"><a href="oppekavad.html">Õppekavad</a></p1>
+            <p1 class="item login_txt"><a href="uusoppekava.html">Loo uus õppekava</a></p1>
+            <p1 class="item login_txt"><a href="login.html">Logi sisse</a></p1>
+        </div>
+
+        <div id="mainArea" class="mainArea">
+            <div id="newsArea" class="mainContentArea">
+                <container class="newCourseArea">
+                    <h2>Õppekava loomine</h2>
+                    <div class="inputField">
+                        <label for="courseCreator" class="contentLabel">Õppekava looja nimi:</label>
+                        <input type="text" name="courseCreator" id="courseCreator">
+                    </div>
+                    <div class="inputField">
+                        <label for="courseFiller" class="contentLabel">Õppekava täitja nimi:</label>
+                        <input type="text" name="courseFiller" id="courseFiller">
+                    </div>
+                    <div id="dateField">
+                        <span class="contentLabel">Kuupäev: </span>
+                        <span id="courseCreationDate" class="contentLabel"></span>
+                    </div>
+                    <div id="linkField">
+                        <button id="generateCourseLink" class="btn">Koosta link</button>
+                        <span id="courseLink"></span>
+                    </div>
+                </container>
+            </div>
+        </div>
+        <div id="fillerMain" class="fillerMain"></div>
+    </div>
+</body>
+</html>

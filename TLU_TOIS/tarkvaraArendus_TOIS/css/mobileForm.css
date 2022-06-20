@@ -1,0 +1,39 @@
+@media (max-width: 1000px) {
+    .headPiece{
+        width: 100%;
+        margin-top: 10em;
+        font-size: 0.5em;
+    }
+    .headPiece >h2{
+        font-size: 5em;
+
+    }
+    #mainContainer{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, white 20%, lightgrey);
+        position: absolute;
+        background-color: black;
+    }
+    .oppekava{
+        position: absolute;
+        width: 630%;
+    }
+    #downloadBtn{
+        width: 100%;
+    }
+    .End{
+        margin-top: 40px;
+        margin-right: 20px;
+        width: 100%;
+        font-size: 0.9em;
+
+
+    }
+    .box>p{
+        font-size: 1em;
+    }
+    
+}

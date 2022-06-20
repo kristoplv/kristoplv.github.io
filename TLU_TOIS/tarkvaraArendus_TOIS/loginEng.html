@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisselogimine</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script type="module" src="js/checkLogin.js" defer></script>
+    <script type="module" src="js/cookies.js" defer></script>
+</head>
+<body>
+    <div id="mainContainer" class="mainContainer"> 
+        <a href="mainEng.html" class="logo"></a>
+        
+        <div id="loginArea" class="login_txt" >          
+            <a href="loginEng.html" class="loginButton" id="logIn">Log in</a>
+        </div>
+        
+        <div id="sidebar" class="sidebar">
+            <h2 class="menuLabel">MENU</h2>
+            <ul id="navMenu" class="navMenu">
+                <li>
+                    <a href="main.html" class="links sides" id="homePage">Home page</a>
+                </li>
+                <li>
+                    <a href="oppekavad.html" class="links sides" id="allForms">All curricula</a>
+                </li>
+                <li>
+                    <a href="uusoppekava.html" class="links sides" id="newForm">Create a new curriculum</a>
+                </li>
+                <a href="login.html"><img src="images/eestilipp.png" title="Eesti keel" class="estFlag"></a>
+                <a href="loginEng.html"><img src="images/uklipp.png" title="Inglise keel" class="ukFlag"></a>
+            </ul>
+        </div>
+            <container class="ribbon">
+                <a class="home_logo item a" id="Logo" href="index.html"><p class="menu-text"></p></a>
+                <!--<a class="item_3 item a" href="main.html"><p class="menu-text">Õppekavad</p></a>
+                    <a class="item_3 item a" href="form.html"><p class="menu-text">Loo uus õppekava</p></a>
+                    <a class="item_3 item a" href="login.html"><p class="menu-text">Logi sisse</p></a>
+                -->
+                <div class="menuBtn" id="menu"></div>
+            </container>
+            <div class="peidus" id="dropped">
+                <p1 class="item login_txt"><a href="main.html">Home page</a></p1>
+                <p1 class="item login_txt"><a href="oppekavad.html">All curricula</a></p1>
+                <p1 class="item login_txt"><a href="uusoppekava.html">Create a new curriculum</a></p1>
+                <p1 class="item login_txt"><a href="login.html">Log in</a></p1>
+            </div>
+        <div id="mainArea" class="mainArea">
+            <div class="uselessFillBox"></div>
+            <container class="login_form">
+                <div class="hello">Log in to your account</div>
+                <div class="email field">
+                    <label for="email_in" class="e_post"><p1 class="login_txt">E-mail address</p1></label><br>
+                    <div class="nice_email">
+                        <div class="human_logo"></div>
+                        <input type="text" name="email_in" id="email" placeholder="E-mail address">
+                    </div>
+                </div>
+                <div class="password field">
+                    <label for="password_in"><p1 class="login_txt">Password</p1></label><br>
+                    <div class="nice_password">
+                        <div class="password_logo"></div>
+                        <input type="password" name="password_in" id="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="rememberMe field">
+                    <label for="rememberMe"><p1 class="login_txt">Remember me</p1></label><br>
+                    <div class="nice_rememberMe">
+                        <input type="checkbox" name="rememberMeCheck" id="rememberMe">
+                    </div>
+                </div>
+                <div class="send field">
+                    <input type="submit" value="Log in" class="login_btn" id="loginButton">
+                </div>
+                <div id="notice"></div>
+                <div class="register field">
+                    <p1 class="login_txt">Forgot your password?</p1>
+                    <a class="forgot_pw" href="index.html"><p1 class="login_txt">Click here!</p1></a>
+                </div>
+                
+            </container>
+        </div>
+        <div id="fillerMain" class="fillerMain"></div>
+    </div>
+    <script src="js/ribbon.js" defer></script>
+</body>
+</html>
+
+<!--
+    e-post: kris@rel.ee
+    pw : afgg325vtwce3ccr23v234c4
+    
+-->

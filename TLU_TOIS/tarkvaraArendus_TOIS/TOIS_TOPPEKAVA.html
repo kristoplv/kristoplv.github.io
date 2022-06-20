@@ -1,0 +1,1983 @@
+
+<!-- saved from url=(0114)https://ois.tlu.ee/portal/page?_pageid=56,596075&_dad=portal&_schema=PORTAL&_tpid=64DCCD7F98583E6B3A9D2A7BA92B06ED -->
+<html dir="LTR" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>TOIS_TOPPEKAVA</title>
+<link rel="Stylesheet" type="text/css" href="./TOIS_TOPPEKAVA_files/PORTAL.wwv_setting.render_css">
+<!--<base href="https://ois.tlu.ee/pls/portal/">--><base href=".">
+<meta name="title" content="TOIS_TOPPEKAVA">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="ORCLADMIN">
+<script type="text/javascript" data-name="TokenSigning">(function() {
+    // Promises
+    var _eid_promises = {};
+    // Turn the incoming message from extension
+    // into pending Promise resolving
+    window.addEventListener("message", function(event) {
+        if (event.source !== window) return;
+        if (event.data.src && (event.data.src === "background.js")) {
+            console.log("Page received: ");
+            console.log(event.data);
+            // Get the promise
+            if (event.data.nonce) {
+                var p = _eid_promises[event.data.nonce];
+                // resolve
+                if (event.data.result === "ok") {
+                    if (event.data.signature !== undefined) {
+                        p.resolve({hex: event.data.signature});
+                    } else if (event.data.version !== undefined) {
+                        p.resolve(event.data.extension + "/" + event.data.version);
+                    } else if (event.data.cert !== undefined) {
+                        p.resolve({hex: event.data.cert});
+                    } else {
+                        console.log("No idea how to handle message");
+                        console.log(event.data);
+                    }
+                } else {
+                    // reject
+                    p.reject(new Error(event.data.result));
+                }
+                delete _eid_promises[event.data.nonce];
+            } else {
+                console.log("No nonce in event msg");
+            }
+        }
+    }, false);
+
+    window.TokenSigning = function() {
+        function nonce() {
+            var val = "";
+            var hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (var i = 0; i < 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+
+        function messagePromise(msg) {
+            return new Promise(function(resolve, reject) {
+                // amend with necessary metadata
+                msg["nonce"] = nonce();
+                msg["src"] = "page.js";
+                // send message
+                window.postMessage(msg, "*");
+                // and store promise callbacks
+                _eid_promises[msg.nonce] = {
+                    resolve: resolve,
+                    reject: reject
+                };
+            });
+        }
+        this.getCertificate = function(options) {
+            var msg = {type: "CERT", lang: options.lang, filter: options.filter};
+            console.log("getCertificate()");
+            return messagePromise(msg);
+        };
+        this.sign = function(cert, hash, options) {
+            var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, info: options.info};
+            console.log("sign()");
+            return messagePromise(msg);
+        };
+        this.getVersion = function() {
+            console.log("getVersion()");
+            return messagePromise({
+                type: "VERSION"
+            });
+        };
+    };
+})();</script></head>
+<body leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0" class="Bodyid1siteid0">
+<script type="text/javascript">
+function show_context_help(h) { 
+    newWindow = window.open(h,"Help", "menubar=1,toolbar=1,scrollbars=1,resizable=1,width=700, height=500"); 
+}
+</script>
+
+<noscript></noscript>
+<style type="text/css">.Highlight { font-family: Arial, Helvetica; font-size: 8pt; color: #FF0000; font-weight: bold ; }</style>
+
+<div id="popup_search"> 
+<script>
+
+// Setup the enter keytrap code
+if (window.document.captureEvents != null) {
+    window.document.captureEvents(Event.KEYPRESS);
+}
+
+//onload=myOnload;
+//window.document.onkeypress = searchKeyTrap;
+//window.document.onkeypress = enter_key_trap;
+//var otherButton=false;
+</script>
+
+</div><table border="0" cellspacing="0" cellpadding="0" width="100%" background="./TOIS_TOPPEKAVA_files/pobtrans.gif"><tbody><tr>
+<td colspan="3" width="100%"><img src="./TOIS_TOPPEKAVA_files/pobtrans.gif" border="0" height="4" alt=""></td>
+</tr>
+<tr align="LEFT">
+<td width="4"><img src="./TOIS_TOPPEKAVA_files/pobtrans.gif" border="0" height="1" width="4" alt=""></td><td valign="top" width="100%">
+<!-- PageOpen -->
+</td></tr>
+<tr><!--td  width="100%" align="left">->
+
+<a onClick="top.location='/pls/portal/tois.ois_public.set_debug?p=1';return false;"><img width=20 height=20 src="/images/pobtrans.gif" border=0 alt="Debug is off" title="Debug is off"></a>
+
+</td--></tr>
+<tr><td width="100%" align="center">
+<script type="text/javascript" src="./TOIS_TOPPEKAVA_files/tois.SYS_JavaScript" language="JavaScript"></script>
+<script language="javascript1.2" src="./TOIS_TOPPEKAVA_files/ois2.SYS_JS_CAL"></script>
+<link href="./TOIS_TOPPEKAVA_files/tois.sys_styles.style_sisu" rel="stylesheet" type="text/css">
+<link href="./TOIS_TOPPEKAVA_files/tois.sys_styles.style_960" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./TOIS_TOPPEKAVA_files/jquery-ui.css" type="text/css" media="all">
+<link rel="stylesheet" href="./TOIS_TOPPEKAVA_files/jquery-ui-custom.css" type="text/css" media="all">
+<script src="./TOIS_TOPPEKAVA_files/jquery-1.6.4.min.js.download" type="text/javascript"></script>
+<script src="./TOIS_TOPPEKAVA_files/jquery-ui.min2.js.download" type="text/javascript"></script>
+<style>
+    .ui-combobox {
+        position: relative;
+        display: inline-block;
+        font-family: Calibri, Arial, Helvetica, Geneva, sans-serif; 
+        font-size: 11px;
+    }
+    .ui-combobox-toggle {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin-left: -1px;
+        padding: 0;
+        /* adjust styles for IE 6/7 */
+        *height: 20px;
+        *top: 1px;
+    }
+    .ui-autocomplete { 
+        max-height: 200px; 
+        overflow-y: scroll; 
+        overflow-x: hidden;
+        font-family: Calibri, Arial, Helvetica, Geneva, sans-serif; 
+        font-size: 11px;
+    }
+    
+    .ui-combobox-input {
+        margin: 0;
+        height: 20px;
+        
+    }
+    .combo-20
+    {
+        width: 50px;
+    }
+    .combo-50
+    {
+        width: 50px;
+    }
+     .combo-70
+    {
+        width: 70px;
+    }
+    .combo-100
+    {
+        width: 100px;
+    }
+    .combo-150
+    {
+        width: 150px;
+    }
+    .combo-200
+    {
+        width: 200px;
+    }
+    .combo-250
+    {
+        width: 250px;
+    }
+    .combo-300
+    {
+        width: 300px;
+    }
+    .combo-350
+    {
+        width: 350px;
+    }
+    .combo-400
+    {
+        width: 400px;
+    }
+     div#users-contain { width: 350px; margin: 20px 0; }
+        div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+        div#users-contain table td, div#users-contain table th { border: 1px solid #eee; padding: .6em 10px; text-align: left; }
+        .ui-dialog .ui-state-error { padding: .3em; }
+        .validateTips { border: 1px solid transparent; padding: 0.3em; }
+    </style>
+    <script>
+
+    
+    (function( $ ) {
+        $.widget( "ui.combobox", {
+            _create: function() {
+                var input,
+                    self = this,
+                    select = this.element.hide(),
+                    selected = select.children( ":selected" ),
+                    value = selected.val() ? selected.text() : "",
+                    wrapper = this.wrapper = $( "<span>" )
+                        .addClass( "ui-combobox" )
+                        .insertAfter( select ),
+                    eleCSS = this.element[0].className;
+
+                input = $( "<input>" )
+                    .appendTo( wrapper )
+                    .val( value )
+                    //.addClass( "ui-state-default ui-combobox-input" )
+                    .addClass( "ui-combobox-input" )
+                    .autocomplete({
+                        delay: 0,
+                        minLength: 0,
+                        source: function( request, response ) {
+                            var matcher = new RegExp( $.ui.autocomplete.escapeRegex(request.term), "i" );
+                            response( select.children( "option" ).map(function() {
+                                var text = $( this ).text();
+                                if ( this.value && ( !request.term || matcher.test(text) ) )
+                                    return {
+                                        label: text.replace(
+                                            new RegExp(
+                                                "(?![^&;]+;)(?!<[^<>]*)(" +
+                                                $.ui.autocomplete.escapeRegex(request.term) +
+                                                ")(?![^<>]*>)(?![^&;]+;)", "gi"
+                                            ), "<strong>$1</strong>" ),
+                                        value: text,
+                                        option: this
+                                    };
+                            }) );
+                        },
+                        select: function( event, ui ) {
+                            ui.item.option.selected = true;
+                            self._trigger( "selected", event, {
+                                item: ui.item.option
+                            });
+                            select.trigger("change"); 
+                        },
+                        change: function( event, ui ) {
+                            if ( !ui.item ) {
+                                var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( $(this).val() ) + "$", "i" ),
+                                    valid = false;
+                                select.children( "option" ).each(function() {
+                                    if ( $( this ).text().match( matcher ) ) {
+                                        this.selected = valid = true;
+                                        return false;
+                                    }
+                                });
+                                if ( !valid ) {
+                                    // remove invalid value, as it didn't match anything
+                                    $( this ).val( "" );
+                                    select.val( "" );
+                                    input.data( "autocomplete" ).term = "";
+                                    return false;
+                                }
+                            }
+                        }
+                    })
+                    .addClass( "ui-widget ui-widget-content ui-corner-left "+ eleCSS );
+
+                input.data( "autocomplete" )._renderItem = function( ul, item ) {
+                    return $( "<li></li>" )
+                        .data( "item.autocomplete", item )
+                        .append( "<a>" + item.label + "</a>" )
+                        .appendTo( ul );
+                };
+
+                $( "<a>" )
+                    .attr( "tabIndex", -1 )
+                    .attr( "title", "Show All Items" )
+                    .appendTo( wrapper )
+                    .button({
+                        icons: {
+                            primary: "ui-icon-triangle-1-s"
+                        },
+                        text: false
+                    })
+                    .removeClass( "ui-corner-all" )
+                    .addClass( "ui-corner-right ui-combobox-toggle" )
+                    .click(function() {
+                        // close if already visible
+                        if ( input.autocomplete( "widget" ).is( ":visible" ) ) {
+                            input.autocomplete( "close" );
+                            return;
+                        }
+
+                        // work around a bug (likely same cause as #5265)
+                        $( this ).blur();
+
+                        // pass empty string as value to search for, displaying all results
+                        input.autocomplete( "search", "" );
+                        input.focus();
+                    });
+            },
+
+            destroy: function() {
+                this.wrapper.remove();
+                this.element.show();
+                $.Widget.prototype.destroy.call( this );
+            }
+        });
+    })( jQuery );
+     $.datepicker.setDefaults($.datepicker.regional["et"]);
+ </script>
+<form action="https://ois.tlu.ee/pls/portal/!tois.SYS_Controller" name="spinnoForm" method="post">
+<div id="container1" class="container_12">
+<table width="100%" cellspacing="0" cellpadding="0" class="tabel">
+<tbody><tr><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0"></td></tr>
+<input type="hidden" name="p_back_url" id="p_back_url" value="https://ois.tlu.ee/portal/page?_pageid=56,596075&amp;_dad=portal&amp;_schema=PORTAL">
+<input type="hidden" name="p_reference_path" id="p_reference_path" value="526111_PTL_TOPPEKAVA_207301995">
+<input type="hidden" name="p_lang_code" id="p_lang_code" value="ET">
+<input type="hidden" name="p_param_block" id="p_param_block" value="">
+<input type="hidden" name="p_page_code" id="p_page_code" value="">
+<input type="hidden" name="p_action" id="p_action" value="">
+<input type="hidden" name="p_nn4" id="p_nn4" value="0">
+<input type="hidden" name="p_nn4_location" id="p_nn4_location" value="">
+<input type="hidden" name="popup_page" id="popup_page" value="">
+<script type="text/javascript" language="JavaScript">
+pageCheck();
+if (document.layers && 0 == 0) {
+//   alert("evil netscape 4 !!!!");
+   document.spinnoForm.p_nn4.value=1;
+   document.spinnoForm.p_nn4_location.value=document.location;
+   document.spinnoForm.submit();
+}
+</script>
+
+<!-- Otsinguparameetrid puuduvad -->
+<!-- Lehe pealkiri -->
+
+            <tr>
+            <td colspan="40"><img src="./TOIS_TOPPEKAVA_files/ttu-logo7.png"></td>
+            <td colspan="10" style="color: #99044b; font-size:24pt; font-family: Calibri;" align="right"></td>
+
+<script type="text/javascript">
+<!--
+
+function doNothing()
+{
+ return false;
+}
+ 
+function onLogout(obj)
+{
+ obj.disabled=true;
+ if(document.userForm!=null && document.userForm.userID!=null)
+  document.userForm.userID.disabled=true;
+  var i;
+  for (i=0; i<document.links.length; i++) {
+   document.links[i].style.color="gray";
+   document.links[i].style.cursor="default";
+   document.links[i].onclick=doNothing;
+  }
+  top.location="/pls/portal/tois.ois_public.logout";
+}
+
+//-->
+</script>
+<td colspan="50" align="right" class="link">Kristo Põlluvee&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="nupp" value="Logi välja" onclick="onLogout(this);"><br><div class="link2"><a href="https://ois.tlu.ee/portal/page?_pageid=56,596192&amp;_dad=portal&amp;_schema=PORTAL" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" title="">Tagasiside</a> | <a href="https://ois.tlu.ee/pls/portal/#" onclick="top.location.href=&#39;/pls/portal/tois.ois_public.abi&#39;; return false;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" title="abi">Abi</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EST&nbsp;|&nbsp;<a href="https://ois.tlu.ee/pls/portal/tois.ois_public.uus_keel?p_kood=EN" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" title=""><nobr>ENG</nobr></a></div></td></tr>
+            
+
+<tr>
+<td colspan="100">
+<script>
+// Javascript originally by Patrick Griffiths and Dan Webb.
+// http://htmldog.com/articles/suckerfish/dropdowns/
+sfHover = function() {
+   var sfEls = document.getElementById("navbar").getElementsByTagName("li");
+   for (var i=0; i<sfEls.length; i++) {
+      sfEls[i].onmouseover=function() {
+         this.className+=" hover";
+      }
+      sfEls[i].onmouseout=function() {
+         this.className=this.className.replace(new RegExp(" hover\\b"), "");
+      }
+   }
+}
+if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+ <!--div id="wrap7">
+      <ul id="navbar7">
+         <li><a href="#">Item One</a><ul>
+            <li><a href="#">Subitem One</a></li><li>
+            <a href="#">Second Subitem</a></li><li>
+            <a href="#">Numero Tres</a></li></ul>
+         </li>
+         <li><a href="#">Second Item</a>
+            <ul>
+               <li><a href="#">Just one subitem</a></li></ul>
+         </li>
+         <li><a href="#">No Subitem</a></li>
+         <li><a href="#">Number Four</a>
+            <ul>
+               <li><a href="#">Subitem One</a></li><li>
+               <a href="#">Second Subitem</a></li><li>
+               <a href="#">Numero Tres</a></li><li>
+               <a href="#">Fourth Thinger</a></li></ul>         
+         </li>
+      </ul>
+    </div-->
+</td>
+</tr>  
+   
+    
+<tr>
+<td colspan="100" class="sub-header" align="left"><table width="100%"><tbody><tr><td>
+      <div id="navbar">
+<li><a href="https://ois.tlu.ee/pls/portal/tois.ois_public.register_set?p_reg=TOIS_PEALEHT"><img src="./TOIS_TOPPEKAVA_files/home1.png" width="20" height="20" hspace="3" align="absmiddle" border="0"></a>
+         </li><li><a href="https://ois.tlu.ee/pls/portal/tois.ois_public.register_set?p_reg=TOIS_TOK" style="background-color: #99044b; color:#fff;">Täiendusõppe õppekava</a>
+         </li><li><a href="https://ois.tlu.ee/pls/portal/tois.ois_public.menu_set?p_reg=TOIS_KURSUS&amp;p_menu=KURS">Kursused</a>
+         </li></div></td>
+    
+</tr></tbody></table></td>
+</tr>
+
+<tr><td colspan="100"><table width="100%"><tbody><tr><td class="ptl-header"><i>TÄIENDUSÕPPE ÕPPEKAVA</i></td></tr></tbody></table></td></tr>
+
+<!-- veateade -->
+<tr id="title_err" style="display:none">
+<td colspan="100">
+    <table width="100%">
+    <tbody><tr>
+    <td class="teade_viga_ikoon "><img src="./TOIS_TOPPEKAVA_files/ikoon_viga.gif" alt="Viga" width="30" height="26" hspace="6" align="absmiddle"></td>
+    <td class="teade_viga_tekst  "><span id="title_err_txt"></span>
+    </td>
+  </tr>
+    </tbody></table>
+</td>
+</tr>
+
+<!-- hoiatus -->
+<tr id="title_wrn" style="display:none">
+<td colspan="100">
+    <table width="100%">
+    <tbody><tr>
+    <td class="teade_hoiatus_ikoon "><img src="./TOIS_TOPPEKAVA_files/ikoon_hoiatus.gif" alt="Hoiatus" width="30" height="26" hspace="6" align="absmiddle"></td>
+    <td class="teade_hoiatus_tekst  "><span id="title_wrn_txt"></span>
+    </td>
+  </tr>
+    </tbody></table>
+</td>
+</tr>
+
+<!-- hea teade -->
+<tr id="title_msg" style="display:none">
+<td colspan="100">
+    <table width="100%">
+    <tbody><tr>
+    <td class="teade_korras_ikoon "><img src="./TOIS_TOPPEKAVA_files/ikoon_korras.gif" alt="Teade" width="30" height="26" hspace="6" align="absmiddle"></td>
+    <td class="teade_korras_tekst  "><span id="title_msg_txt"></span>
+    </td>
+  </tr>
+    </tbody></table>
+</td>
+</tr>
+
+
+<!-- vahe pealkirja ja ?lej??nud osa vahel -->
+<tr><td colspan="100">&nbsp;</td></tr> 
+
+
+<script type="text/javascript">
+<!--
+pageSetup();
+//-->
+</script>
+<input type="hidden" name="p_close" id="p_close" value="0">
+<input type="hidden" name="p_formid" id="p_formid" value="PTL_TOPPEKAVA">
+<input type="hidden" name="p_pageid" id="p_pageid" value="TOIS_TOPPEKAVA">
+<input type="hidden" name="p_parent_session_id" id="p_parent_session_id" value="64970067">
+<input type="hidden" name="p_local_session_id" id="p_local_session_id" value="64970068">
+<input type="hidden" name="p_id" id="p_id" value="-1">
+<input type="hidden" name="p_mode" id="p_mode" value="2">
+
+<script type="text/javascript">
+<!--
+
+      function validate() {
+        if(onbl==0)
+        {onbl=0;
+         if (fNotEmptyControl('nimetus_est',1,'nimetus e.k.') == false)          //nimetus eesti
+            return false;
+         /*if (fCheckTahemarkideArv('nimetus_est',1,'nimetus e.k.',5)== false) 
+            return false;*/
+         if (fNotEmptyControl('nimetus_en',1,'nimetus i.k.') == false)    //nimetus english
+            return false;
+         /*if (fCheckTahemarkideArv('nimetus_en',1,'nimetus i.k.',5)== false) 
+            return false;   */
+         if (Rus && fNotEmptyControl('nimetus_ru',1,'nimetus v.k.') == false)    //nimetus vene
+            return false;
+         /*if (Rus && fCheckTahemarkideArv('nimetus_ru',1,'nimetus v.k.',5)== false) 
+            return false;   */
+            
+         if (!$("input[name='cb_kontakt']").is(":checked") &&
+             !$("input[name='cb_prakt']").is(":checked") &&
+             !$("input[name='cb_ise']").is(":checked") &&
+             //!$("input[name='cb_juhend']").is(":checked") &&
+             !$("input[name='cb_muu']").is(":checked")) 
+             {alert('Väljas "õppeviis" vähemalt üks  peab olema valitud!');                    // õppeviis
+             return false;} 
+         if ($("input[name^='cb_keel']:checked").length==0) 
+             {alert('Väljas "õppetöö keeled" vähemalt üks  peab olema valitud!');                    // keeled
+             return false;} 
+              
+         if (kVorm && fNotEmptyControl('kriteerium_est',1,'hindamiskriteeriumid e.k.') == false)      //hindamiskriteerium eesti
+            return false;                                                                                              
+         if (kVorm && Eng && fNotEmptyControl('kriteerium_en',1,'hindamiskriteeriumid i.k.') == false)    //hindamiskriteerium english
+            return false;
+         if (kVorm && Rus && fNotEmptyControl('kriteerium_ru',1,'hindamiskriteeriumid v.k.') == false)    //hindamiskriteerium vene
+            return false;
+            
+         if (fNotEmptyControl('sihtgrupp',1,'sihtgrupp') == false)          //eesmargid eesti
+            return false;  
+            
+         if (tTok && (fNotEmptyControl('korr_str_id',1,'veebis kuvatav korraldaja üksus,  nimi, telefon, e-post') == false ||
+                      fNotEmptyControl('korr_kontakt',1,'veebis kuvatav korraldaja üksus,  nimi, telefon, e-post') == false))      //hindamiskriteerium eesti
+            return false;          
+            
+            
+         if (fNotEmptyControl('eesmargid_est',1,'eesmärk e.k.') == false)          //eesmargid eesti
+            return false;                                                                                              
+         if (Eng && fNotEmptyControl('eesmargid_en',1,'eesmärk i.k.') == false)    //eesmargid english
+            return false;
+         if (Rus && fNotEmptyControl('eesmargid_ru',1,'eesmärk v.k') == false)    //eesmargid vene
+            return false;
+            
+         if (fNotEmptyControl('valjundid_est',1,'õpitulemused e.k.') == false)          //valjundid eesti
+            return false;                                                                                              
+         if (Eng && fNotEmptyControl('valjundid_en',1,'õpitulemused i.k.') == false)    //valjundid english
+            return false;
+         if (Rus && fNotEmptyControl('valjundid_ru',1,'õpitulemused v.k.') == false)    //valjundid vene
+            return false; 
+            
+         if (kVorm1 && fNotEmptyControl('sisu_est',1,'sisu e.k.') == false)          //sisu eesti
+            return false;                                                                                              
+         if (kVorm1 && Eng && fNotEmptyControl('sisu_en',1,'sisu i.k.') == false)    //sisu english
+            return false;
+         if (kVorm1 && Rus && fNotEmptyControl('sisu_ru',1,'sisu v.k.') == false)    //sisu vene
+            return false;  
+       // MK 12.06.2017 TLUOIS-237 see peab olema kohustuslik:      
+         if (fNotEmptyControl('eeldused_est',1,'eeldused e.k.') == false)          //eeldused eesti
+            return false;                                                                                              
+         if (Eng && fNotEmptyControl('eeldused_en',1,'Eeldused i.k') == false)    //eeldused english
+            return false;
+         if (Rus && fNotEmptyControl('eeldused_ru',1,'eeldused v.k.') == false)    //eeldused vene
+            return false; 
+       // MK 09.06.2017 TLUOIS-235 see peab olema kohustuslik (=õppeprotsessi kirjeldus):      
+         if (fNotEmptyControl('tingimused_est',1,'õppemeetodite, sh. iseseisva töö kirjeldus e.k.') == false)          //tingimused eesti
+            return false;                                                                                              
+         if (Eng && fNotEmptyControl('tingimused_en',1,'õppemeetodite, sh. iseseisva töö kirjeldus i.k.') == false)    //tingimused english
+            return false;
+         if (Rus && fNotEmptyControl('tingimused_ru',1,'õppemeetodite, sh. iseseisva töö kirjeldus v.k.') == false)    //tingimused vene
+            return false; 
+      
+         
+       var m=0;                      // koolitusvaldkonnad
+         if (kvtbl_cnt>0) 
+            for (var i=0;i<kvtbl_cnt;i++) {
+                  m=i+1;
+                  if ($("#kvrow"+m).css("display")!="none"
+                  && $("#p_kool_valdkond_kood"+m).val()) {m=0; break;}
+                  } 
+        if (m>0)
+                {alert('Vähemalt üks koolitusvaldkond peab olema valitud!'); return false;} //Vähemalt üks koolitusvaldkond peab olema valitud!
+         
+         
+         if (isced_on==1 && fNotEmptyControl('isced',1,'õppekava rühm (ISCED)') == false)          // ISCED
+            return false;
+            
+         if (fNotEmptyControl('koost_alus',1,'õppekava koostamise alus') == false)          // koosatamise alus
+            return false;  
+         
+         if (fNotEmptyControl('pohivast_str',1,'põhivastutaja struktuuriüksus') == false)  // põhivastutaja str
+            return false;   
+         
+         if (fNotEmptyControl('pohivast_nimi',1,'põhivastutaja nimi') == false)  // põhivastutaja
+            return false; 
+            
+         
+         if (fNotEmptyControl('opikeskkond',1,'õpikeskkond') == false)  // opikeskkond
+            return false; 
+         
+         if (fNotEmptyControl('kompetents',1,'koolitaja kompetentsus') == false)  // kompetents
+            return false; 
+         
+         if ($("input[name='prots_kokku']").val() != 100) {alert('Vastutajate mahuprotsentide summa peab olema 100%!');   // protsent kokku  
+            return false;}
+            
+         if ($("input[on_korr]:checked").length==0) 
+             {alert('Sisulised vastutajad: vähemalt ühe korraldaja määramine on kohustuslik!');                    // Vähemalt ühe korraldaja määramine on kohustuslik!
+             return false;}                
+        
+         return true;
+        }
+        else
+       {
+         onbl=0;
+         return false;
+        } 
+      }
+    
+//-->
+</script>
+<input type="hidden" name="kas_moodul" id="kas_moodul" value="ei">
+
+<script type="text/javascript">
+<!--
+
+         function tundeKokku() {
+            var kont = parseFloat(fGetValue('tun_kontakt',1));
+            var ise  = parseFloat(fGetValue('tun_ise',1));
+            var prakt  = parseFloat(fGetValue('tun_praktika',1));
+            if (isNaN(kont)) {kont=0; fSetValue('tun_kontakt',1,0);}
+            if (isNaN(ise)) {ise=0; fSetValue('tun_ise',1,0);}
+            if (isNaN(prakt)) {prakt=0; fSetValue('tun_praktika',1,0);}
+            var eap  = 0;
+            //alert((Math.floor((kont+ise)/13)/2));
+            if((kont+ise+prakt) >=26) 
+                eap=Math.floor((kont+ise+prakt)/13)/2;
+            else
+                eap=0;    
+            fSetValue('tun_kokku',1,kont+ise+prakt);
+            fSetValue('maht_eap',1,eap);
+            }
+         function clearInput(obj, input_name) {
+            if (obj.checked==false) 
+            fSetValue(input_name,1,'');
+            } 
+             
+         function switchCB(obj, cb_name) { 
+            var cb = document.getElementById(cb_name);
+            if (obj.value=='') 
+            cb.checked=false;
+            else
+            cb.checked=true;
+            } 
+           
+         isced_on=1;
+         function changeOptions(obj, target_name) { // täielikult asendab combobox-is (ISCED) <option>-ide hulk sõltuvalt "vanema" combo-valiku
+           var kood = obj.value;  
+           var target = "#"+target_name;         
+           var url = '!tois.ois_public.draw_page2';    
+           var inpt = $(target).next().find("input:eq(0)");   // leiab <input>, mida kajastab <select>i tekst                  
+           $.get( url, {_page:"CE94AB9F36D14364696AB60DB045706201F05CC8E78005BAA25C6A3DC5D77477", p_kood:kood},
+              function(data) {                            
+              $(target).html(data); //alert(target_name=="isced" && data.indexOf("#NODATA")>-1);
+              inpt.val(""); 
+              $("#isced").next().find("input:eq(0)").val("");
+              //$("#isced option:selected").val("");
+              //alert(target_name +" "+data.indexOf("#NODATA")+" "+data);
+              if (target_name=="isced" && data.indexOf("#NODATA")>-1) {
+                  isced_on=0;
+                  $("#td_isced").find("span").html("");             
+              }
+              else {
+                  isced_on=1;
+                  $("#td_isced").find("span").html("*");
+              }
+              return true; 
+             }             // end function(data)
+           );              // end $.get            
+         }
+         
+
+         function cb_kontaktEvent() {
+            var obj = $("input[name='cb_kontakt']"); 
+            var t = $("#tun_kontakt");
+            if (!obj.is(":checked")) {
+               t.attr("disabled","disabled");
+               t.val("0"); 
+               t.attr("value","0");
+               tundeKokku();              
+            } 
+            else 
+               t.removeAttr("disabled");            
+         }         
+         
+         function cb_iseEvent() {
+            var obj = $("input[name='cb_ise']"); //alert(obj.is(":checked"));
+            var t = $("#tun_ise");
+            if (!obj.is(":checked")) {
+               t.attr("disabled","disabled");
+               t.val("0"); 
+               t.attr("value","0");
+               tundeKokku();              
+            } 
+            else 
+               t.removeAttr("disabled");            
+         }
+
+         function cb_praktEvent() {
+            var obj = $("input[name='cb_prakt']"); //alert(obj.is(":checked"));
+            var t = $("#tun_praktika");
+            if (!obj.is(":checked")) {
+               t.attr("disabled","disabled");
+               t.val("0"); 
+               t.attr("value","0");
+               tundeKokku();              
+            } 
+            else 
+               t.removeAttr("disabled");            
+         }
+         
+         var Eng = true;
+         var Rus = true; 
+         var kVorm = true;
+         // MK 09.06.2017 TLUOIS-236 et sisu lahtreid ei mõjutaks hindamismeetodi(=kontrollivormi) muutmine, teen neile atribuudi kvorm1: 
+         var kVorm1 = true; 
+         var tTok=true;
+          
+         function cb_keelEvent(obj, lang) {
+            if (!obj.checked) {
+              $("span[keel='"+lang+"']").html("");
+              if (lang=="EN") Eng=false; 
+              if (lang=="RU") Rus=false;                        
+            } 
+            else {
+              $("span[keel='"+lang+"'][kvorm='1']").html("*");
+              $("span[keel='"+lang+"']:not([kvorm])").html("*");
+              if (lang=="EN") Eng=true; 
+              if (lang=="RU") Rus=true;
+              }
+         }
+         
+         function kvormChange() {
+            var kvorm = $("#kontrollvorm").val();
+            if (kvorm=="TOK_KONTROLLVORM_P") {
+            $("span[kvorm]").attr("kvorm","0");
+            // 09.06.2017 MK TLUOIS-236 see mõjutab nüüd ainult 3 hindamiskriteeriumide välja:
+            $("span[kvorm]").html("");
+            kVorm = false;
+            }
+            else {
+               $("span[kvorm]").attr("kvorm","1");
+               if (Eng) 
+                  $("span[kvorm][keel='EN']").html("*");
+               if (Rus)
+                  $("span[kvorm][keel='RU']").html("*");
+               $("span[kvorm]:not([keel])").html("*");   
+               kVorm= true;
+            }
+            
+         }
+         
+         function tokChange() {
+            var tok = $("#kas_tellitav").val();
+            if (tok=="jah") {
+                $("span[tok]").html("*");
+                tTok = true;
+            }   
+            else
+            {    $("span[tok]").attr("tok","0");
+                $("span[tok]").html("");
+                tTok = false;
+            }
+            
+            
+         }
+         
+         function showKoostTyyp() {            
+           var alus=$("#koost_alus").val();
+           var txt = $("#td_koost_tyyp").prev(); 
+           if (alus=="TOK_KOOST_ALUS_S" || alus=="TOK_KOOST_ALUS_E" ) {
+               $("#td_koost_tyyp").show();
+               txt.show();
+               }
+           else {
+               $("#td_koost_tyyp").hide(); 
+               $("#koost_tyyp").val(""); 
+               txt.hide();   
+           } 
+         }
+         
+         function juhan_pm_select() {
+         
+         var sval=$("#juhan_pm_id").val();
+             if (sval != -1) {
+                $("#juhan_pm_personalcode").attr("disabled","disabled").val("");
+                $("#juhan_pm_firstname").attr("disabled","disabled").val("");
+                $("#juhan_pm_familyname").attr("disabled","disabled").val("");
+                $("#juhan_pm_email").attr("disabled","disabled").val("");
+                $("#juhan_pm_phone").attr("disabled","disabled").val("");
+                $("#juhan_pm_job").attr("disabled","disabled").val("");
+             }
+             else {
+                $("#juhan_pm_personalcode").removeAttr("disabled");
+                $("#juhan_pm_firstname").removeAttr("disabled");
+                $("#juhan_pm_familyname").removeAttr("disabled");
+                $("#juhan_pm_email").removeAttr("disabled");
+                $("#juhan_pm_phone").removeAttr("disabled");
+                $("#juhan_pm_job").removeAttr("disabled");
+             }
+         }
+         
+         function validate_juhan() {
+         
+            var sval=$("#juhan_pm_id").val();
+                
+            if (sval == -1) {     
+             if (fNotEmptyControl('juhan_pm_personalcode',1,'isikukood') == false)          //juhan pm personalcode
+                return false;
+             if (fNotEmptyControl('juhan_pm_firstname',1,'eesnimi') == false)          //juhan pm eesnimi
+                return false;
+             if (fNotEmptyControl('juhan_pm_familyname',1,'perekonnanimi') == false)          //juhan pm perekonnanimi
+                return false;
+             if (fNotEmptyControl('juhan_pm_email',1,'e-posti aadress') == false)          //juhan pm email
+                return false;
+             if (fNotEmptyControl('juhan_pm_phone',1,'telefoninumber') == false)          //juhan pm telefoninumber
+                return false;
+             if (fInteger('juhan_pm_phone',1,'telefoninumber') == false)          //juhan pm telefoninumber
+                return false;
+             if (fNotEmptyControl('juhan_pm_job',1,'töö kirjeldus') == false)          //juhan pm job
+                return false;
+            }
+            
+            
+            if ($("#juhan_program_id").val() < 0) 
+             {alert('õppeprogramm JUHAN-is ei tohi olla määramata!');                    // juhan program id
+             return false;} 
+            
+         return true;
+         }
+         
+                
+    
+//-->
+</script>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">nimetus e.k.&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><input type="text" name="nimetus_est" id="nimetus_est" size="130" maxlength="1000"></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">nimetus i.k.&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><input type="text" name="nimetus_en" id="nimetus_en" size="130" maxlength="1000"></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">nimetus v.k.<span keel="RU" style="color: red"></span></td>
+<td class="s" colspan="81"><input type="text" name="nimetus_ru" id="nimetus_ru" size="130" maxlength="1000"></td>
+</tr>
+
+<script type="text/javascript">
+<!--
+
+      var mod_cnt = 0; //moodulite arv
+      
+      function wParam() {
+         var p_str = '-1';
+         var elements = window.document.spinnoForm.elements;
+         for (i = 0; i < elements.length; i++){
+           if (elements[i].name.substr(0,11) == 'p_moodul_id'
+               && elements[i].name != 'p_moodul_id'
+               && elements[i].value !='') { 
+            p_str = p_str+','+elements[i].value;  
+           }  
+         } // loop end
+         if (p_str.length > 0) {
+           // p_str = p_str.substr(1);
+            p_str = ' and ok.oppekava_id not in ('+p_str+')';
+            return '&wparam='+p_str;
+         } 
+         return '';
+         }
+  
+         
+      function addModule(ok_id, ok_name) {
+         var idx = mod_cnt+1;
+         var r = $("#mrow_tmpl").clone(); // table row
+                r.attr("id","mrow"+idx);                
+         var m = r.find("input[name='p_moodul_id']"); // hidden input "p_moodul_id"
+                m.attr("name","p_moodul_id"+idx);   
+                m.attr("id","p_moodul_id"+idx); 
+                m.val(ok_id);
+         var o = r.find("input[name='p_oppekava_moodul_id']"); // hidden input "p_moodul_id"
+                o.attr("name","p_oppekava_moodul_id"+idx);   
+                o.attr("id","p_oppekava_moodul_id"+idx); 
+         var a = r.find("a"); // <a ind=...>  
+               a.attr("ind",idx);
+         var mkeeled="";
+         var url = '!tois.ois_public.draw_page2';
+         var n = r.find("#mnimi") // mooduli nimi 
+                 n.attr("id","mnimi"+idx);
+                 n.html('&nbsp;'+ok_name);
+         $.get( url, {_page:"E5538E1960027A7CDCB9E4D6EB784593BC7A7F08C47C3ABCBC724C55D75C5C2B", p_id:ok_id},
+              function(data) {
+              mkeeled=data;
+              n.html('&nbsp;'+ok_name+mkeeled);
+              }
+          );    
+         //alert(' '+ok_name+mkeeled); 
+         
+                 
+         var mn = r.find("#p_mnimi") // mooduli nimi 
+                 mn.attr("id","p_mnimi"+idx);
+                 mn.attr("name","p_mnimi"+idx);
+                 mn.val(ok_name);        
+         if (mod_cnt==0) {
+            var bf = $("#mrow_tmpl"); 
+           bf.before(r); }
+         else  {
+            var af = $("#mrow"+mod_cnt);                                
+            af.after(r); }
+              
+         r.show();  
+            mod_cnt=mod_cnt+1;  
+            
+         var teised_moodulid;
+         //alert(idx);
+         for(var i=1; i<= 25; i++)
+         {
+            //alert(fGetValue("p_moodul_id"+i,1));
+            teised_moodulid=teised_moodulid+","+fGetValue("p_moodul_id"+i,1)+",";
+            //alert(teised_moodulid);
+         } 
+         //alert(teised_moodulid);  
+            
+    //----------- valime õppekava õppeviis sõltuvalt moodule viisidest -----------------  
+         url = '!tois.ois_public.draw_page2'; 
+         $.get( url, {_page:"CE94AB9F36D14364C283BC2BAB94346FF91E98F1B77E46A27D452C94E9ECFE5C", p_id:teised_moodulid},
+              function(data) {
+              //alert(data);
+              $("input[name='cb_kontakt']").attr("checked",false);
+              $("#tun_kontakt").attr("disabled","disabled");
+              $("input[name='cb_prakt']").attr("checked",false);
+              $("#tun_praktika").attr("disabled","disabled");
+              $("input[name='cb_ise']").attr("checked",false);
+              $("#tun_ise").attr("disabled","disabled");
+              $("input[name='cb_muu']").attr("checked",false); 
+              $("input[name='muu_oppe']").val("");           
+              if (get_param(data,"kontakt")=="jah") {
+                  $("input[name='cb_kontakt']").attr("checked",true);
+                  //$("#tun_kontakt").removeAttr("disabled");
+               }
+              if (get_param(data,"praktika")=="jah")
+                  $("input[name='cb_prakt']").attr("checked",true);    
+              if (get_param(data,"iseseisev")=="jah") {
+                  $("input[name='cb_ise']").attr("checked",true);
+                  //$("#tun_ise").removeAttr("disabled");
+                  } 
+            //  if (get_param(data,"juhend")=="jah")
+            //      $("input[name='cb_juhend']").attr("checked",true); 
+              if (get_param(data,"muu"))
+              {
+                  $("input[name='cb_muu']").attr("checked",true); 
+                  $("input[name='muu_oppe']").val(get_param(data,"muu"));  
+              }
+              //alert(get_param(data,"ti"));
+              //ja nüüd punktid
+              $("input[name='tun_kontakt']").val(get_param(data,"tk"));  
+              $("input[name='tun_ise']").val(get_param(data,"&ti"));   
+              $("input[name='tun_praktika']").val(get_param(data,"tp"));   
+              //alert(data+" "+get_param(data,"&ti"));  
+              tundeKokku();    
+              
+              var p_mood=get_param(data,"p_mood").split(","); 
+              var p_ise=get_param(data,"p_ise").split(",");
+              var p_praktika=get_param(data,"p_praktika").split(",");
+              var p_kkt=get_param(data,"p_kkt").split(",");
+              var p_kontakt=get_param(data,"p_kontakt").split(",");
+              
+              var pp=$("tr").get();
+              for(var i=0;i<pp.length;i++)
+              {
+                if($(pp[i]).attr("id")!=null && $(pp[i]).attr("id")=="tttrow")
+                    $(pp[i]).remove();
+              }
+              //$("#tttrow").remove();
+              if(p_mood.length > 0)
+              {
+                for(var i=1; i< p_mood.length;i++)
+                {
+                  
+                  var nn="";
+                  for(var ii=1; ii<= 25; ii++)
+                  {
+                    if(fGetValue("p_moodul_id"+ii,1)==p_mood[i])
+                        nn=$("#p_mnimi"+ii).val(); //$("#p_mnimi"+idx).val()
+                  }   
+                  
+                  var mm1=$("#trow_tmpl").clone(); // table row
+                  mm1.attr("id","tttrow");
+                  mm1.html("<td colspan=\"19\" align=\"right\" class=\"s1 yt\">"+nn
+                  +"</td><td colspan=\"16\" class=\"s yt\">"+p_kontakt[i]+
+                  "</td><td class=\"s yt\" colspan=\"18\">"+p_praktika[i]+
+                  "</td><td class=\"s yt\" colspan=\"29\">"+p_ise[i]+
+                  "</td><td class=\"s yt\" colspan=\"18\">"+p_kkt[i]+
+                  "</td>"); 
+                  af = $("#trow_tmpl");                                
+                  af.after(mm1);
+                  mm1.show();
+                }
+              }
+               
+              return true;    
+             }             // end function(data)
+           );              // end $.get     
+    
+    //---------------------------------------                    
+      }
+      
+      var open_dialog2=function(params, popupTitle){
+        $('#popup_search').dialog({
+        autoOpen: true,
+        width: 550,
+        height: 580,
+        title: popupTitle,
+        modal: true,
+        open: function (e) {
+           $.post('!tois.ois_public.draw_page2',params, function(data) {
+                $('#popup_search').empty();
+                $('#popup_search').html(data);
+                //console.log(data);
+            });
+          },
+        close: function (e) {
+            $(this).empty();
+            $(this).dialog('destroy');
+        }
+        });
+      };
+    
+      function showModule2(obj) {
+         var idx = $(obj).attr('ind');
+         var moodul_id = $("#p_moodul_id"+idx).val();
+         var title = $("#p_mnimi"+idx).val();
+        // alert('TEMPLATE\n Aken õppekava mooduliga [oppekava_id='+moodul_id.toString(16)+']');
+          open_dialog2('_page=CE94AB9F36D143640EC76A516FE20F02F9A4AF0BE6C758387500732B8DB87FEF&p_id='+moodul_id+'',title);
+         return false;
+      }
+         
+      function delModule(obj) {
+         var idx = $(obj).attr('ind');
+         var module = $("#p_mnimi"+idx).val();
+         if (confirm('Kas oled kindel, et soovid moodulit "'+module+'" õppekavast eemaldada?')) {
+           $("#p_moodul_id"+idx).val("");
+           $("#mrow"+idx).hide();
+          }
+          
+          var teised_moodulid;
+         //alert(idx);
+         for(var i=1; i<= 25; i++)
+         {
+            //alert(fGetValue("p_moodul_id"+i,1));
+            teised_moodulid=teised_moodulid+","+fGetValue("p_moodul_id"+i,1)+",";
+            //alert(teised_moodulid);
+         }  
+         //alert(teised_moodulid); 
+            
+    //----------- valime õppekava õppeviis sõltuvalt moodule viisidest -----------------  
+         var url = '!tois.ois_public.draw_page2'; 
+         $.get( url, {_page:"CE94AB9F36D14364C283BC2BAB94346FF91E98F1B77E46A27D452C94E9ECFE5C", p_id:teised_moodulid},
+              function(data) {
+              //alert(data);
+              $("input[name='cb_kontakt']").attr("checked",false);
+              $("#tun_kontakt").attr("disabled","disabled");
+              $("input[name='cb_prakt']").attr("checked",false);
+              $("#tun_praktika").attr("disabled","disabled");
+              $("input[name='cb_ise']").attr("checked",false);
+              $("#tun_ise").attr("disabled","disabled");
+              $("input[name='cb_muu']").attr("checked",false); 
+              $("input[name='muu_oppe']").val("");         
+              if (get_param(data,"kontakt")=="jah") {
+                  $("input[name='cb_kontakt']").attr("checked",true);
+                  //$("#tun_kontakt").removeAttr("disabled");
+              }
+              if (get_param(data,"praktika")=="jah")
+                  $("input[name='cb_prakt']").attr("checked",true);    
+              if (get_param(data,"iseseisev")=="jah") {
+                  $("input[name='cb_ise']").attr("checked",true);
+                  //$("#tun_ise").removeAttr("disabled");
+                  } 
+            //  if (get_param(data,"juhend")=="jah")
+            //      $("input[name='cb_juhend']").attr("checked",true); 
+              if (get_param(data,"muu"))
+              {
+                  $("input[name='cb_muu']").attr("checked",true); 
+                  $("input[name='muu_oppe']").val(get_param(data,"muu"));
+              }  
+              //ja nüüd punktid
+              $("input[name='tun_kontakt']").val(get_param(data,"tk"));  
+              $("input[name='tun_ise']").val(get_param(data,"&ti"));     
+              $("input[name='tun_praktika']").val(get_param(data,"tp"));   
+              tundeKokku();   
+              
+              var p_mood=get_param(data,"p_mood").split(","); 
+              var p_ise=get_param(data,"p_ise").split(",");
+              var p_praktika=get_param(data,"p_praktika").split(",");
+              var p_kkt=get_param(data,"p_kkt").split(",");
+              var p_kontakt=get_param(data,"p_kontakt").split(",");
+              
+              
+              var pp=$("tr").get();
+              for(var i=0;i<pp.length;i++)
+              {
+                if($(pp[i]).attr("id")!=null && $(pp[i]).attr("id")=="tttrow")
+                    $(pp[i]).remove();
+              }
+              if(p_mood.length > 0)
+              {
+                for(var i=1; i< p_mood.length;i++)
+                {
+                  
+                  var nn="";
+                  for(var ii=1; ii<= 25; ii++)
+                  {
+                    if(fGetValue("p_moodul_id"+ii,1)==p_mood[i])
+                        nn=$("#p_mnimi"+ii).val();
+                  }   
+                  
+                  var mm1=$("#trow_tmpl").clone(); // table row
+                  mm1.attr("id","tttrow");
+                  mm1.html("<td colspan=\"19\" align=\"right\" class=\"s1 yt\">"+nn
+                  +"</td><td colspan=\"16\" class=\"s yt\">"+p_kontakt[i]+
+                  "</td><td class=\"s yt\" colspan=\"18\">"+p_praktika[i]+
+                  "</td><td class=\"s yt\" colspan=\"29\">"+p_ise[i]+
+                  "</td><td class=\"s yt\" colspan=\"18\">"+p_kkt[i]+
+                  "</td>"); 
+                  af = $("#trow_tmpl");                                
+                  af.after(mm1);
+                  mm1.show();
+                }
+              }        
+              return true;    
+             }             // end function(data)
+           );              // end $.get     
+      }         
+
+      
+//-->
+</script>
+<tr>
+<td colspan="100" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="19" style="font-weight:bold; color:darkred">&nbsp;Moodulid</td>
+<td colspan="1"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" onclick="wp=wParam(); set_dialog_def(850,550); open_dialog(&#39;_spid=26089945&#39;+wp,&#39;Moodulite otsing&#39;);return false;"><nobr>&nbsp;&nbsp;<img src="./TOIS_TOPPEKAVA_files/ikoon_uus.gif" alt="lisa" title="lisa" width="11" height="13" border="0"></nobr></a></td>
+</tr>
+
+<script type="text/javascript">
+<!--
+mod_cnt=0; 
+//-->
+</script>
+<tr id="mrow_tmpl" style="display:none">
+<input type="hidden" name="p_oppekava_moodul_id" id="p_oppekava_moodul_id" value="">
+<input type="hidden" name="p_moodul_id" id="p_moodul_id" value="">
+<td colspan="1"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" ind="0" onclick="showModule2(this);return false;"><nobr>&nbsp;&nbsp;<img src="./TOIS_TOPPEKAVA_files/nupp_luup.gif" alt="vaata" title="vaata" width="11" height="11" border="0"></nobr></a></td>
+<td colspan="1"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" ind="0" onclick="delModule(this);return false;"><nobr>&nbsp;&nbsp;<img src="./TOIS_TOPPEKAVA_files/ikoon_kustuta.gif" alt="eemalda" title="eemalda" width="11" height="13" border="0"></nobr></a></td>
+<td colspan="99" id="mnimi">&nbsp;</td>
+<input type="hidden" name="p_mnimi" id="p_mnimi" value="">
+</tr>
+<tr>
+<td colspan="100" valign="top">&nbsp;</td>
+</tr>
+<tr><td class="s1 bold" colspan="19">õppeviis&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81">
+<input class="checkbox" type="checkbox" name="cb_kontakt" id="cb_kontakt" value="jah" onclick="cb_kontaktEvent();return true;">kontaktõpe&nbsp;sh&nbsp;e-õpe&nbsp;&nbsp;&nbsp;<input class="checkbox" type="checkbox" name="cb_prakt" id="cb_prakt" value="jah" onclick="cb_praktEvent();return true;">praktika&nbsp;&nbsp;&nbsp;<input class="checkbox" type="checkbox" name="cb_ise" id="cb_ise" value="jah" onclick="cb_iseEvent();return true;">iseseisev&nbsp;töö&nbsp;&nbsp;&nbsp;<input class="checkbox" type="checkbox" name="cb_muu" id="cb_muu" value="jah" onclick="clearInput(this,&#39;muu_oppe&#39;);return true;">muu&nbsp;&nbsp;&nbsp;<input type="text" name="muu_oppe" id="muu_oppe" size="15" onchange="switchCB(this,&#39;cb_muu&#39;);">
+</td></tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top"><nobr>kontaktõpe (t)</nobr>&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="8"><input type="text" name="tun_kontakt" id="tun_kontakt" size="3" maxlength="3" onchange="tundeKokku();" disabled="disabled" value="0"></td>
+<td class="s1 bold" colspan="8" valign="top">praktika (t)&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="10"><input type="text" name="tun_praktika" id="tun_praktika" size="3" maxlength="3" onchange="tundeKokku();" disabled="disabled" value="0"></td>
+<td class="s1 bold" colspan="8" valign="top">iseseisev töö (t)&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="10"><input type="text" name="tun_ise" id="tun_ise" size="3" maxlength="3" onchange="tundeKokku();" disabled="disabled" value="0"></td>
+<td class="s1 bold" colspan="19" valign="top">kokku maht tundides&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="18"><input type="text" name="tun_kokku" disabled="disabled" id="tun_kokku" size="3" maxlength="3"></td>
+</tr>
+<tr id="trow_tmpl" style="display:none">
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õppekava maht (EAP)&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><input type="text" name="maht_eap" disabled="disabled" id="maht_eap" value="0" size="3" maxlength="3"></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19">õppevorm</td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#oppetase" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#oppetase" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divoppetase" name="divoppetase"><select id="oppetase" class="combo-150 ht" name="oppetase" style="display: none;">
+<option value=""></option>
+<option value="TOK_KOOLITUS_LIIK_A">arendusprojekt</option>
+<option value="TOK_KOOLITUS_LIIK_N">arenguprogramm</option>
+<option value="TOK_KOOLITUS_LIIK_Y">avatud õpe</option>
+<option value="TOK_KOOLITUS_LIIK_M">doktorikool</option>
+<option value="TOK_KOOLITUS_LIIK_E">e-õpe</option>
+<option value="TOK_KOOLITUS_LIIK_R">individuaalkoolitus</option>
+<option value="TOK_KOOLITUS_LIIK_T">konverents</option>
+<option value="TOK_KOOLITUS_LIIK_K">koolitus</option>
+<option value="TOK_KOOLITUS_LIIK_D">kursus</option>
+<option value="TOK_KOOLITUS_LIIK_B">laager</option>
+<option value="TOK_KOOLITUS_LIIK_L">loeng</option>
+<option value="TOK_KOOLITUS_LIIK_C">meistriklass</option>
+<option value="TOK_KOOLITUS_LIIK_F">mikrokraad</option>
+<option value="TOK_KOOLITUS_LIIK_P">praktika</option>
+<option value="TOK_KOOLITUS_LIIK_S">seminar</option>
+<option value="TOK_KOOLITUS_LIIK_V">supervisioon</option>
+<option value="TOK_KOOLITUS_LIIK_G">suvekool</option>
+<option value="TOK_KOOLITUS_LIIK_W">talvekool</option>
+<option value="TOK_KOOLITUS_LIIK_O">Õpilasakadeemia</option>
+<option value="TOK_KOOLITUS_LIIK_H">õpituba</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-150 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+<tr><td class="s1 bold" colspan="19">õppetöö keeled&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81">
+<input class="checkbox" type="checkbox" name="cb_keel_est" id="cb_keel_est" value="jah" onclick="return true;">eesti&nbsp;&nbsp;&nbsp;<input class="checkbox" type="checkbox" name="cb_keel_en" id="cb_keel_en" value="jah" onclick="cb_keelEvent(this, &#39;EN&#39;);return true;">inglise&nbsp;&nbsp;&nbsp;<input class="checkbox" type="checkbox" name="cb_keel_ru" id="cb_keel_ru" value="jah" onclick="cb_keelEvent(this, &#39;RU&#39;);return true;">vene&nbsp;&nbsp;&nbsp;<input class="checkbox" type="checkbox" name="cb_keel_muu" id="cb_keel_muu" value="jah" onclick="clearInput(this,&#39;keel_muu&#39;);return true;">muu&nbsp;&nbsp;&nbsp;<input type="text" name="keel_muu" id="keel_muu" size="20" onchange="switchCB(this,&#39;cb_keel_muu&#39;);">
+</td></tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">sihtgrupp&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="sihtgrupp_s" class="short"><span id="sihtgrupp_t"></span><a href="javascript:hide_show_uus(&#39;sihtgrupp_s&#39;,&#39;sihtgrupp_l&#39;,&#39;sihtgrupp_t&#39;,&#39;sihtgrupp&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="sihtgrupp_l" class="long"><a href="javascript:hide_show_uus(&#39;sihtgrupp_l&#39;,&#39;sihtgrupp_s&#39;,&#39;sihtgrupp_t&#39;,&#39;sihtgrupp&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="sihtgrupp" id="sihtgrupp" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19">hindamismeetod&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#kontrollvorm" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#kontrollvorm" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divkontrollvorm" name="divkontrollvorm"><select id="kontrollvorm" class="combo-100 ht" name="kontrollvorm" onchange="kvormChange();" style="display: none;">
+<option value="">-- Vali --</option>
+<option value="TOK_KONTROLLVORM_A">arvestus</option>
+<option value="TOK_KONTROLLVORM_E">eksam</option>
+<option value="TOK_KONTROLLVORM_P">puudub</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-100 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">hindamiskriteeriumid e.k.<span kvorm="1" style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="kriteerium_est_s" class="short"><span id="kriteerium_est_t"></span><a href="javascript:hide_show_uus(&#39;kriteerium_est_s&#39;,&#39;kriteerium_est_l&#39;,&#39;kriteerium_est_t&#39;,&#39;kriteerium_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="kriteerium_est_l" class="long"><a href="javascript:hide_show_uus(&#39;kriteerium_est_l&#39;,&#39;kriteerium_est_s&#39;,&#39;kriteerium_est_t&#39;,&#39;kriteerium_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="kriteerium_est" id="kriteerium_est" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">hindamiskriteeriumid i.k.<span keel="EN" kvorm="1" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="kriteerium_en_s" class="short"><span id="kriteerium_en_t"></span><a href="javascript:hide_show_uus(&#39;kriteerium_en_s&#39;,&#39;kriteerium_en_l&#39;,&#39;kriteerium_en_t&#39;,&#39;kriteerium_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="kriteerium_en_l" class="long"><a href="javascript:hide_show_uus(&#39;kriteerium_en_l&#39;,&#39;kriteerium_en_s&#39;,&#39;kriteerium_en_t&#39;,&#39;kriteerium_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="kriteerium_en" id="kriteerium_en" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">hindamiskriteeriumid v.k.<span keel="RU" kvorm="1" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="kriteerium_ru_s" class="short"><span id="kriteerium_ru_t"></span><a href="javascript:hide_show_uus(&#39;kriteerium_ru_s&#39;,&#39;kriteerium_ru_l&#39;,&#39;kriteerium_ru_t&#39;,&#39;kriteerium_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="kriteerium_ru_l" class="long"><a href="javascript:hide_show_uus(&#39;kriteerium_ru_l&#39;,&#39;kriteerium_ru_s&#39;,&#39;kriteerium_ru_t&#39;,&#39;kriteerium_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="kriteerium_ru" id="kriteerium_ru" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">eesmärk e.k.&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="eesmargid_est_s" class="short"><span id="eesmargid_est_t"></span><a href="javascript:hide_show_uus(&#39;eesmargid_est_s&#39;,&#39;eesmargid_est_l&#39;,&#39;eesmargid_est_t&#39;,&#39;eesmargid_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="eesmargid_est_l" class="long"><a href="javascript:hide_show_uus(&#39;eesmargid_est_l&#39;,&#39;eesmargid_est_s&#39;,&#39;eesmargid_est_t&#39;,&#39;eesmargid_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="eesmargid_est" id="eesmargid_est" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">eesmärk i.k.<span keel="EN" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="eesmargid_en_s" class="short"><span id="eesmargid_en_t"></span><a href="javascript:hide_show_uus(&#39;eesmargid_en_s&#39;,&#39;eesmargid_en_l&#39;,&#39;eesmargid_en_t&#39;,&#39;eesmargid_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="eesmargid_en_l" class="long"><a href="javascript:hide_show_uus(&#39;eesmargid_en_l&#39;,&#39;eesmargid_en_s&#39;,&#39;eesmargid_en_t&#39;,&#39;eesmargid_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="eesmargid_en" id="eesmargid_en" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">eesmärk v.k<span keel="RU" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="eesmargid_ru_s" class="short"><span id="eesmargid_ru_t"></span><a href="javascript:hide_show_uus(&#39;eesmargid_ru_s&#39;,&#39;eesmargid_ru_l&#39;,&#39;eesmargid_ru_t&#39;,&#39;eesmargid_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="eesmargid_ru_l" class="long"><a href="javascript:hide_show_uus(&#39;eesmargid_ru_l&#39;,&#39;eesmargid_ru_s&#39;,&#39;eesmargid_ru_t&#39;,&#39;eesmargid_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="eesmargid_ru" id="eesmargid_ru" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õpitulemused e.k.&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="valjundid_est_s" class="short"><span id="valjundid_est_t"></span><a href="javascript:hide_show_uus(&#39;valjundid_est_s&#39;,&#39;valjundid_est_l&#39;,&#39;valjundid_est_t&#39;,&#39;valjundid_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="valjundid_est_l" class="long"><a href="javascript:hide_show_uus(&#39;valjundid_est_l&#39;,&#39;valjundid_est_s&#39;,&#39;valjundid_est_t&#39;,&#39;valjundid_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="valjundid_est" id="valjundid_est" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õpitulemused i.k.<span keel="EN" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="valjundid_en_s" class="short"><span id="valjundid_en_t"></span><a href="javascript:hide_show_uus(&#39;valjundid_en_s&#39;,&#39;valjundid_en_l&#39;,&#39;valjundid_en_t&#39;,&#39;valjundid_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="valjundid_en_l" class="long"><a href="javascript:hide_show_uus(&#39;valjundid_en_l&#39;,&#39;valjundid_en_s&#39;,&#39;valjundid_en_t&#39;,&#39;valjundid_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="valjundid_en" id="valjundid_en" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õpitulemused v.k.<span keel="RU" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="valjundid_ru_s" class="short"><span id="valjundid_ru_t"></span><a href="javascript:hide_show_uus(&#39;valjundid_ru_s&#39;,&#39;valjundid_ru_l&#39;,&#39;valjundid_ru_t&#39;,&#39;valjundid_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="valjundid_ru_l" class="long"><a href="javascript:hide_show_uus(&#39;valjundid_ru_l&#39;,&#39;valjundid_ru_s&#39;,&#39;valjundid_ru_t&#39;,&#39;valjundid_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="valjundid_ru" id="valjundid_ru" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">sisu e.k.<span kvorm1="1" style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="sisu_est_s" class="short"><span id="sisu_est_t"></span><a href="javascript:hide_show_uus(&#39;sisu_est_s&#39;,&#39;sisu_est_l&#39;,&#39;sisu_est_t&#39;,&#39;sisu_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="sisu_est_l" class="long"><a href="javascript:hide_show_uus(&#39;sisu_est_l&#39;,&#39;sisu_est_s&#39;,&#39;sisu_est_t&#39;,&#39;sisu_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="sisu_est" id="sisu_est" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">sisu i.k.<span keel="EN" kvorm1="1" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="sisu_en_s" class="short"><span id="sisu_en_t"></span><a href="javascript:hide_show_uus(&#39;sisu_en_s&#39;,&#39;sisu_en_l&#39;,&#39;sisu_en_t&#39;,&#39;sisu_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="sisu_en_l" class="long"><a href="javascript:hide_show_uus(&#39;sisu_en_l&#39;,&#39;sisu_en_s&#39;,&#39;sisu_en_t&#39;,&#39;sisu_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="sisu_en" id="sisu_en" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">sisu v.k.<span keel="RU" kvorm1="1" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="sisu_ru_s" class="short"><span id="sisu_ru_t"></span><a href="javascript:hide_show_uus(&#39;sisu_ru_s&#39;,&#39;sisu_ru_l&#39;,&#39;sisu_ru_t&#39;,&#39;sisu_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="sisu_ru_l" class="long"><a href="javascript:hide_show_uus(&#39;sisu_ru_l&#39;,&#39;sisu_ru_s&#39;,&#39;sisu_ru_t&#39;,&#39;sisu_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="sisu_ru" id="sisu_ru" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">eeldused e.k.<span kvorm1="1" style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="eeldused_est_s" class="short"><span id="eeldused_est_t"></span><a href="javascript:hide_show_uus(&#39;eeldused_est_s&#39;,&#39;eeldused_est_l&#39;,&#39;eeldused_est_t&#39;,&#39;eeldused_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="eeldused_est_l" class="long"><a href="javascript:hide_show_uus(&#39;eeldused_est_l&#39;,&#39;eeldused_est_s&#39;,&#39;eeldused_est_t&#39;,&#39;eeldused_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="eeldused_est" id="eeldused_est" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">Eeldused i.k<span keel="EN" kvorm1="1" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="eeldused_en_s" class="short"><span id="eeldused_en_t"></span><a href="javascript:hide_show_uus(&#39;eeldused_en_s&#39;,&#39;eeldused_en_l&#39;,&#39;eeldused_en_t&#39;,&#39;eeldused_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="eeldused_en_l" class="long"><a href="javascript:hide_show_uus(&#39;eeldused_en_l&#39;,&#39;eeldused_en_s&#39;,&#39;eeldused_en_t&#39;,&#39;eeldused_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="eeldused_en" id="eeldused_en" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">eeldused v.k.<span keel="RU" kvorm1="1" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="eeldused_ru_s" class="short"><span id="eeldused_ru_t"></span><a href="javascript:hide_show_uus(&#39;eeldused_ru_s&#39;,&#39;eeldused_ru_l&#39;,&#39;eeldused_ru_t&#39;,&#39;eeldused_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="eeldused_ru_l" class="long"><a href="javascript:hide_show_uus(&#39;eeldused_ru_l&#39;,&#39;eeldused_ru_s&#39;,&#39;eeldused_ru_t&#39;,&#39;eeldused_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="eeldused_ru" id="eeldused_ru" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õppemeetodite, sh. iseseisva töö kirjeldus e.k.&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="tingimused_est_s" class="short"><span id="tingimused_est_t"></span><a href="javascript:hide_show_uus(&#39;tingimused_est_s&#39;,&#39;tingimused_est_l&#39;,&#39;tingimused_est_t&#39;,&#39;tingimused_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="tingimused_est_l" class="long"><a href="javascript:hide_show_uus(&#39;tingimused_est_l&#39;,&#39;tingimused_est_s&#39;,&#39;tingimused_est_t&#39;,&#39;tingimused_est&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="tingimused_est" id="tingimused_est" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õppemeetodite, sh. iseseisva töö kirjeldus i.k.<span keel="EN" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="tingimused_en_s" class="short"><span id="tingimused_en_t"></span><a href="javascript:hide_show_uus(&#39;tingimused_en_s&#39;,&#39;tingimused_en_l&#39;,&#39;tingimused_en_t&#39;,&#39;tingimused_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="tingimused_en_l" class="long"><a href="javascript:hide_show_uus(&#39;tingimused_en_l&#39;,&#39;tingimused_en_s&#39;,&#39;tingimused_en_t&#39;,&#39;tingimused_en&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="tingimused_en" id="tingimused_en" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">õppemeetodite, sh. iseseisva töö kirjeldus v.k.<span keel="RU" style="color: red"></span></td>
+<td class="s" colspan="81"><div id="tingimused_ru_s" class="short"><span id="tingimused_ru_t"></span><a href="javascript:hide_show_uus(&#39;tingimused_ru_s&#39;,&#39;tingimused_ru_l&#39;,&#39;tingimused_ru_t&#39;,&#39;tingimused_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="tingimused_ru_l" class="long"><a href="javascript:hide_show_uus(&#39;tingimused_ru_l&#39;,&#39;tingimused_ru_s&#39;,&#39;tingimused_ru_t&#39;,&#39;tingimused_ru&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="tingimused_ru" id="tingimused_ru" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,4000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+
+<script type="text/javascript">
+<!--
+
+         var kvtbl_cnt = 0;
+         function copy_kvrow() {
+            if (kvtbl_cnt>0 && $("#kvrow"+kvtbl_cnt).css("display")!="none"
+                  && ! $("#p_kool_valdkond_kood"+kvtbl_cnt).val())
+                {alert(''); return false;}
+            var idx = kvtbl_cnt+1;
+            var r = $("#kvrow_tmpl").clone(); // table row
+                r.attr("id","kvrow"+idx);
+                r.find("select").attr("id","p_kool_valdkond_kood"+idx);
+                r.find("select").attr("name","p_kool_valdkond_kood"+idx);  
+                r.find("input[name='p_oppekava_vald_id']").attr("name","p_oppekava_vald_id"+idx);
+                
+                a = r.find("a");
+                $(a).attr("indeks",idx);
+            
+            if (kvtbl_cnt>0) { 
+              var kuhu = $("#kvrow"+kvtbl_cnt);                                   
+              kuhu.after(r); }
+            else {
+              var kuhu = $("#kvrow_tmpl");                                   
+              kuhu.before(r); }
+            
+            r.find("select").combobox();
+            $("select#p_kool_valdkond_kood"+idx+" option:selected").html("");
+            r.show();  
+            kvtbl_cnt=kvtbl_cnt+1;                         
+         }
+         
+        function clear_vald(obj) {
+        var idx = $(obj).attr("indeks"); 
+        var valdkond = $("select#p_kool_valdkond_kood"+idx+" option:selected").html();
+           if (confirm('Kas oled kindel, et soovid koolitusvaldkond "'+valdkond+'" õppekavast eemaldada?')) //õppekavast eemaldada?
+            {
+        $("#p_kool_valdkond_kood"+idx).val("");  
+        $("#kvrow"+idx).attr("del","1");
+        $("#kvrow"+idx).hide(); 
+        var hidden_rows = $("tr[del]").length;
+        if (hidden_rows==kvtbl_cnt) copy_kvrow();// kui kustutakse viimast, siis tekib uus tühi väli
+            }
+        }   
+      
+//-->
+</script>
+<tr>
+<td class="s_top border_right_light" colspan="19" valign="top" style="border-left:none;font-weight:bold">koolitusvaldkond<span style="color: red">*</span></td>
+<td colspan="81"><table><tbody>
+
+<script type="text/javascript">
+<!--
+kvtbl_cnt=0; 
+//-->
+</script>
+<tr id="kvrow1" style="">
+<input type="hidden" name="p_oppekava_vald_id1" id="p_oppekava_vald_id" value="">
+<td class="s" colspan="81" style="border:none;width:380px"><div class="ui-widget"><select class="combo-350 ht" name="p_kool_valdkond_kood1" id="p_kool_valdkond_kood1" style="display: none;">
+<option value=""></option>
+<option value="TOK_VALDKOND_LO">Digi- ja meediakultuur</option>
+<option value="TOK_VALDKOND_EE">Edu &amp; Tegu</option>
+<option value="TOK_VALDKOND_HA">Haridusuuendus</option>
+<option value="TOK_VALDKOND_HU">Kultuurilised kompetentsid</option>
+<option value="TOK_VALDKOND_TS">Terve ja jätkusuutlik eluviis</option>
+<option value="TOK_VALDKOND_SO">Ühiskond ja avatud valitsemine</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div>
+</td><td colspan="10"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" onclick="clear_vald(this); return false;" indeks="1"><nobr><img src="./TOIS_TOPPEKAVA_files/ikoon_kustuta.gif" alt="puhasta" title="puhasta" border="0"></nobr></a></td>
+</tr><tr id="kvrow_tmpl" style="display:none">
+<input type="hidden" name="p_oppekava_vald_id" id="p_oppekava_vald_id" value="">
+<td class="s" colspan="81" style="border:none;width:380px"><div class="ui-widget"><select class="combo-350 ht" name="p_kool_valdkond_kood" id="p_kool_valdkond_kood">
+<option value=""> </option>
+<option value="TOK_VALDKOND_LO">Digi- ja meediakultuur</option>
+<option value="TOK_VALDKOND_EE">Edu &amp; Tegu</option>
+<option value="TOK_VALDKOND_HA">Haridusuuendus</option>
+<option value="TOK_VALDKOND_HU">Kultuurilised kompetentsid</option>
+<option value="TOK_VALDKOND_TS">Terve ja jätkusuutlik eluviis</option>
+<option value="TOK_VALDKOND_SO">Ühiskond ja avatud valitsemine</option>
+</select></div>
+</td><td colspan="10"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" onclick="clear_vald(this); return false;" indeks=""><nobr><img src="./TOIS_TOPPEKAVA_files/ikoon_kustuta.gif" alt="puhasta" title="puhasta" border="0"></nobr></a></td>
+</tr>
+<tr>
+<td colspan="10"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" onclick="copy_kvrow();return false;"><nobr>&nbsp;&nbsp;<img src="./TOIS_TOPPEKAVA_files/ikoon_uus.gif" alt="lisa" title="lisa" width="11" height="13" border="0"></nobr></a></td>
+</tr></tbody></table></td>
+
+<script type="text/javascript">
+<!--
+copy_kvrow();
+//-->
+</script>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19">õppevaldkond (ISCED)&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#isced_vald" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#isced_vald" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divisced_vald" name="divisced_vald"><select id="isced_vald" class="combo-350 ht" name="isced_vald" onchange="changeOptions(this, &#39;isced_suund&#39;, &#39;isced&#39;);" style="display: none;">
+<option value="">-- Vali --</option>
+<option value="ISCED_VALD_0">Üldõppekavad (0)</option>
+<option value="ISCED_VALD_1">Haridus (1)</option>
+<option value="ISCED_VALD_10">Teenindus (10)</option>
+<option value="ISCED_VALD_2">Humanitaaria ja kunstid (2)</option>
+<option value="ISCED_VALD_3">Sotsiaalteadused, ajakirjandus ja infolevi (3)</option>
+<option value="ISCED_VALD_4">Ärindus, haldus ja õigus (4)</option>
+<option value="ISCED_VALD_5">Loodusteadused, matemaatika ja statistika (5)</option>
+<option value="ISCED_VALD_6">Informatsiooni- ja kommunikatsioonitehnoloogiad (6)</option>
+<option value="ISCED_VALD_7">Tehnika, tootmine ja ehitus (7)</option>
+<option value="ISCED_VALD_9">Tervis ja heaolu (9)</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19">õppesuund (ISCED)&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#isced_suund" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#isced_suund" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divisced_suund" name="divisced_suund"><select id="isced_suund" class="combo-350 ht" name="isced_suund" onchange="changeOptions(this, &#39;isced&#39;);" style="display: none;">
+<option value="">-- Vali --</option>
+<option value="ISCED_SUUN_003">Isikuareng (003)</option>
+<option value="ISCED_SUUN_011">Haridus (011)</option>
+<option value="ISCED_SUUN_018">Hariduse interdistsiplinaarne õppesuund (018)</option>
+<option value="ISCED_SUUN_023">Keel (023)</option>
+<option value="ISCED_SUUN_028">Humanitaaria ja kunsti interdistsiplinaarne õppesuund (028)</option>
+<option value="ISCED_SUUN_041">41Ärindus ja haldus (041)</option>
+<option value="ISCED_SUUN_051">Bioloogia ja sellega seotud teadused (051)</option>
+<option value="ISCED_SUUN_053">Füüsikalised loodusteadused (053)</option>
+<option value="ISCED_SUUN_061">Informatsiooni- ja kommunikatsioonitehnoloogiad (061)</option>
+<option value="ISCED_SUUN_068">Informatsiooni- ja kommunikatsioonitehnoloogia interdistsiplinaarne õppesuund (068)</option>
+<option value="ISCED_SUUN_071">Tehnikaalad (071)</option>
+<option value="ISCED_SUUN_073">Arhitektuur ja ehitus (073)</option>
+<option value="ISCED_SUUN_091">Tervis (091)</option>
+<option value="ISCED_SUUN_092">Heaolu (092)</option>
+<option value="ISCED_SUUN_098">Tervise ja heaolu interdistsiplinaarne õppesuund (098)</option>
+<option value="ISCED_SUUN_101">Isikuteenindus (101)</option>
+<option value="ISCED_SUUN_102">Hügieen ja töötervishoid (102)</option>
+<option value="ISCED_SUUN_103">Turvateenused (103)</option>
+<option value="ISCED_SUUN_21">Kunstid (21)</option>
+<option value="ISCED_SUUN_22">Humanitaaria (22)</option>
+<option value="ISCED_SUUN_31">Sotsiaal- ja käitumisteadused (31)</option>
+<option value="ISCED_SUUN_32">Ajakirjandus ja teave (32)</option>
+<option value="ISCED_SUUN_38">Sotsiaalteaduste, ajakirjanduse ja teabe interdistsiplinaarne õppesuund (38)</option>
+<option value="ISCED_SUUN_42">Õigus (42)</option>
+<option value="ISCED_SUUN_48">Ärinduse, halduse ja õiguse interdistsiplinaarne õppesuund (48)</option>
+<option value="ISCED_SUUN_52">Keskkond (52)</option>
+<option value="ISCED_SUUN_54">Matemaatika ja statistika (54)</option>
+<option value="ISCED_SUUN_58">Loodusteaduste, matemaatika ja statistika interdistsiplinaarne õppesuund (58)</option>
+<option value="ISCED_SUUN_72">Tootmine ja töötlemine (72)</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" id="td_isced">õppekava rühm (ISCED)&nbsp;<span style="color: red"></span></td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#isced" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#isced" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divisced" name="divisced"><select id="isced" class="combo-350 ht" name="isced" style="display: none;">
+<option value="">-- Vali --</option>
+<option value="ISCED_RYHM_142">Kasvatusteadus (0111) (142)</option>
+<option value="ISCED_RYHM_143">Koolieelikute õpetajate koolitus (0112) (143)</option>
+<option value="ISCED_RYHM_144">Klassiõpetaja koolitus (0113) (144)</option>
+<option value="ISCED_RYHM_145">Aineõpetajate koolitus (0114) (145)</option>
+<option value="ISCED_RYHM_146">Eakate ja puudega täiskasvanute hooldamine (0921) (146)</option>
+<option value="ISCED_RYHM_210">Hariduse interdistsiplinaarne õppekava (0188) (210)</option>
+<option value="ISCED_RYHM_211">Kujutav kunst ja kunstiteadus (0213) (211)</option>
+<option value="ISCED_RYHM_212">Moe-, sise- ja tööstusdisain (212)</option>
+<option value="ISCED_RYHM_213">Audiovisuaalsed tehnikad ja meedia tootmine (0211) (213)</option>
+<option value="ISCED_RYHM_214">Käsitöö (214)</option>
+<option value="ISCED_RYHM_215">Muusika ja esitluskunstid (215)</option>
+<option value="ISCED_RYHM_220">Humanitaaria ja kunsti interdistsiplinaarne õppekava 288 (220)</option>
+<option value="ISCED_RYHM_221">Usundiõpetus ja usuteadus (221)</option>
+<option value="ISCED_RYHM_222">Ajalugu ja arheoloogia (222)</option>
+<option value="ISCED_RYHM_223">Filosoofia ja eetika (223)</option>
+<option value="ISCED_RYHM_224">Kirjandus ja lingvistika (0232) (224)</option>
+<option value="ISCED_RYHM_226">Keeleõpe (0231) (226)</option>
+<option value="ISCED_RYHM_310">Sotsiaalteaduste, ajakirjanduse ja teabe interdists. õppekava (0388) (310)</option>
+<option value="ISCED_RYHM_311">Majandusteadus (311)</option>
+<option value="ISCED_RYHM_312">Poliitikateadus ja kodanikuõpetus (312)</option>
+<option value="ISCED_RYHM_313">Psühholoogia (313)</option>
+<option value="ISCED_RYHM_314">Sotsioloogia ja kulturoloogia (314)</option>
+<option value="ISCED_RYHM_321">Ajakirjandus (321)</option>
+<option value="ISCED_RYHM_322">Raamatukogundus, teave, arhiivindus (322)</option>
+<option value="ISCED_RYHM_341">Majutamine ja toitlustamine (1013) (341)</option>
+<option value="ISCED_RYHM_343">Reisimine, turism ja vaba aja veetmine (1015) (343)</option>
+<option value="ISCED_RYHM_344">Majandusarvestus ja maksundus (0411) (344)</option>
+<option value="ISCED_RYHM_421">(0421) Õigus (421)</option>
+<option value="ISCED_RYHM_422">Sekretäri- ja kontoritöö (0415) (422)</option>
+<option value="ISCED_RYHM_440">Juhtimine ja haldus (0413) (440)</option>
+<option value="ISCED_RYHM_441">Turundus ja reklaam (0414) (441)</option>
+<option value="ISCED_RYHM_442">Rahandus, pangandus ja kindlustus (0412) (442)</option>
+<option value="ISCED_RYHM_443">Tööoskused (0417) (443)</option>
+<option value="ISCED_RYHM_461">Hulgi- ja jaekaubandus (0461) (461)</option>
+<option value="ISCED_RYHM_481">(0448) Ärinduse, halduse ja õiguse interdistsiplinaarne õppekava (481)</option>
+<option value="ISCED_RYHM_520">Biokeemia (0512) (520)</option>
+<option value="ISCED_RYHM_521">Keskkonnateadused (521)</option>
+<option value="ISCED_RYHM_522">Looduskeskkond ja elusloodus (522)</option>
+<option value="ISCED_RYHM_523">Füüsika (0533) (523)</option>
+<option value="ISCED_RYHM_525">Bioloogia (0511) (525)</option>
+<option value="ISCED_RYHM_540">Keemia (0531) (540)</option>
+<option value="ISCED_RYHM_541">Maateadus (0532) (541)</option>
+<option value="ISCED_RYHM_542">Statistika (542)</option>
+<option value="ISCED_RYHM_543">Matemaatika (0541) (543)</option>
+<option value="ISCED_RYHM_581">Arhitektuur ja linnaplaneerimine (0731) (581)</option>
+<option value="ISCED_RYHM_582">Loodusteaduste, matemaatika ja statistika interdistsiplinaarne (0588) (582)</option>
+<option value="ISCED_RYHM_620">Andmebaaside ja võrgu disain ning haldus (0612) (620)</option>
+<option value="ISCED_RYHM_621">Lastehoid ja teenused noortele (0922) (621)</option>
+<option value="ISCED_RYHM_622">Arvutikasutus (0611) (622)</option>
+<option value="ISCED_RYHM_623">Tarkvara ja rakenduste arendus ning analüüs (0613) (623)</option>
+<option value="ISCED_RYHM_624">Informatsiooni- ja kommunikatsioonitehnoloogia interdistsiplinaarne õppekava 688 (624)</option>
+<option value="ISCED_RYHM_721">Toiduainete töötlemine (721)</option>
+<option value="ISCED_RYHM_722">Materjalide töötlemine (klaas, paber, plast, puit) (722)</option>
+<option value="ISCED_RYHM_725">Mehaanika ja metallitöö (0715) (725)</option>
+<option value="ISCED_RYHM_726">Teraapia ja taastusravi (0915) (726)</option>
+<option value="ISCED_RYHM_727">Tekstiili, rõivaste, jalatsite valmistamine, naha töötlemine (0723) (727)</option>
+<option value="ISCED_RYHM_761">Keskkonnakaitsetehnoloogia (0712) (761)</option>
+<option value="ISCED_RYHM_762">Sotsiaaltöö ja nõustamine (0923) (762)</option>
+<option value="ISCED_RYHM_810">Isikuareng (0031) (810)</option>
+<option value="ISCED_RYHM_813">Sport (1014) (813)</option>
+<option value="ISCED_RYHM_814">Meditsiinidiagnostika- ja ravitehnoloogia (0914) (814)</option>
+<option value="ISCED_RYHM_815">Koduteenindus (1011) (815)</option>
+<option value="ISCED_RYHM_850">Keemiatehnoloogia ja -protsessid (0711) (850)</option>
+<option value="ISCED_RYHM_851">Elektroonika ja automaatika (0714) (851)</option>
+<option value="ISCED_RYHM_852">Traditsiooniline ja täiendav meditsiin ning teraapia (0917) (852)</option>
+<option value="ISCED_RYHM_860">Vara- ja isikukaitse (1032) (860)</option>
+<option value="ISCED_RYHM_862">Töötervishoid ja -kaitse (1022) (862)</option>
+<option value="ISCED_RYHM_863">Sõjandus ja riigikaitse (1031) (863)</option>
+<option value="ISCED_RYHM_999">Tevise ja heaolu interdistsiplinaarne õppekava (0988) (999)</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">viide seadusega seotud koolitusele</td>
+<td class="s" colspan="81"><input type="text" name="viide_kool" id="viide_kool" size="65" maxlength="255"></td>
+</tr>
+<tr><td class="s1 bold" colspan="19">õppekava koostamise alus&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="20"><script>$(function() {
+        $( "#koost_alus" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#koost_alus" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divkoost_alus" name="divkoost_alus"><select id="koost_alus" class="combo-350 ht" name="koost_alus" onchange="showKoostTyyp();" style="display: none;">
+<option value="">-- Vali --</option>
+<option value="TOK_KOOST_ALUS_A">alus formaliseerimata</option>
+<option value="TOK_KOOST_ALUS_K">keeleõpe</option>
+<option value="TOK_KOOST_ALUS_E">kutse- või eriala riikliku või kooli õppekava moodul või selle osa</option>
+<option value="TOK_KOOST_ALUS_S">kutsestandard</option>
+<option value="TOK_KOOST_ALUS_L">sihtrühm on õpilased</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+<td class="s" colspan="5" style="border:none;">&nbsp;</td>
+<td class="s1 bold" colspan="10" valign="top" style="display: none;">täpsustus</td>
+<td class="s" colspan="46" id="td_koost_tyyp" style="display: none;"><input type="text" name="koost_tyyp" style="width:100%" id="koost_tyyp" size="40" maxlength="1000"></td>
+</tr><tr>
+<td class="s1 bold" colspan="19" valign="top">õpikeskkond&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="opikeskkond_s" class="short"><span id="opikeskkond_t"></span><a href="javascript:hide_show_uus(&#39;opikeskkond_s&#39;,&#39;opikeskkond_l&#39;,&#39;opikeskkond_t&#39;,&#39;opikeskkond&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="opikeskkond_l" class="long"><a href="javascript:hide_show_uus(&#39;opikeskkond_l&#39;,&#39;opikeskkond_s&#39;,&#39;opikeskkond_t&#39;,&#39;opikeskkond&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="opikeskkond" id="opikeskkond" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,1000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">koolitaja kompetentsus&nbsp;<span style="color: red">*</span></td>
+<td class="s" colspan="81"><div id="kompetents_s" class="short"><span id="kompetents_t"></span><a href="javascript:hide_show_uus(&#39;kompetents_s&#39;,&#39;kompetents_l&#39;,&#39;kompetents_t&#39;,&#39;kompetents&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="kompetents_l" class="long"><a href="javascript:hide_show_uus(&#39;kompetents_l&#39;,&#39;kompetents_s&#39;,&#39;kompetents_t&#39;,&#39;kompetents&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="kompetents" id="kompetents" style="width:100% " cols="100" rows="2" onblur="return onBlurTextArea(this,1000);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">kommentaar</td>
+<td class="s" colspan="81"><div id="kommentaar_s" class="short"><span id="kommentaar_t"></span><a href="javascript:hide_show_uus(&#39;kommentaar_s&#39;,&#39;kommentaar_l&#39;,&#39;kommentaar_t&#39;,&#39;kommentaar&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/nupp_pliiats.gif" alt="muuda" title="muuda" width="12" height="12" border="0"></a></div><div id="kommentaar_l" class="long"><a href="javascript:hide_show_uus(&#39;kommentaar_l&#39;,&#39;kommentaar_s&#39;,&#39;kommentaar_t&#39;,&#39;kommentaar&#39;,79);"><img src="./TOIS_TOPPEKAVA_files/ilistrmv.gif" border="0" alt="Näita vähem" title="Näita vähem"></a><textarea class="textarea" name="kommentaar" id="kommentaar" style="width:100% " cols="100" rows="5" onblur="return onBlurTextArea(this,1400);" onkeypress="onKeypressTA(event); return true;"></textarea></div></td>
+</tr>
+
+<script type="text/javascript">
+<!--
+
+         function calc_procent() {
+            var proc = 0;
+            var tmp  = 0;
+            var elements = window.document.spinnoForm.elements;
+            for (i = 0; i < elements.length; i++){
+              if (elements[i].name.substr(0,8) == 'protsent') {
+                if (isNaN(parseFloat(elements[i].value))) {
+                    //alert(elements[i].value);
+                    elements[i].value=0;
+                    tmp = 0;
+                    }
+                else tmp = parseFloat(elements[i].value);    
+                proc = proc + tmp;
+              }
+            }
+         fSetValue('prots_kokku',1, proc);                                      
+         }
+      
+//-->
+</script>
+<tr>
+<td colspan="100" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="72" style="font-weight:bold; color:darkred">&nbsp;<nobr>Sisulised vastutajad</nobr></td>
+<td colspan="28" style="font-style:italic;font-weight:bold;">&nbsp;</td>
+</tr>
+<tr>
+<td class="s border_right" colspan="36" style="font-weight:bold; font-style:italic;"><nobr>põhivastutaja struktuuriüksus<span style="color: red">*</span></nobr></td>
+<td class="s border_right" colspan="36" style="font-weight:bold; font-style:italic;"><nobr>põhivastutaja nimi</nobr></td>
+<td class="s border_right" colspan="14" style="font-weight:bold; font-style:italic;" align="center"><nobr>on korraldaja</nobr></td>
+<td class="s border_right" colspan="14" style="font-style:italic;font-weight:bold;">&nbsp;Mahuprotsent</td>
+</tr>
+<tr>
+<td class="s" colspan="36"><script>$(function() {
+        $( "#pohivast_str" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#pohivast_str" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divpohivast_str" name="divpohivast_str"><select id="pohivast_str" class="combo-350 ht" name="pohivast_str" style="display: none;">
+<option value=""> </option>
+<option value="630">AY - avatud akadeemia</option>
+<option value="52">CI - Konfutsiuse instituut</option>
+<option value="5004">DT - digitehnoloogiate instituut</option>
+<option value="5001">FK - Balti filmi, meedia ja kunstide instituut</option>
+<option value="13">HK - Haapsalu kolledž</option>
+<option value="5000">HR - haridusteaduste instituut</option>
+<option value="5003">HT - humanitaarteaduste instituut</option>
+<option value="5005">LT - loodus- ja terviseteaduste instituut</option>
+<option value="20">RK - Rakvere kolledž</option>
+<option value="5002">YK - ühiskonnateaduste instituut</option>
+<option value="446">IK - haridusinnovatsiooni keskus</option>
+<option value="442">OP - e-õppe keskus</option>
+<option value="441">PO - personaliosakond</option>
+<option value="37">vana: AI - ajaloo instituut</option>
+<option value="132">vana: AK - õigusakadeemia</option>
+<option value="444">vana: AO - arendusosakond</option>
+<option value="443">vana: AR - akadeemiline raamatukogu</option>
+<option value="5120">vana: AV - avatud akadeemia</option>
+<option value="42">vana: BF - Balti filmi- ja meediakool</option>
+<option value="35">vana: DI - eesti demograafia instituut</option>
+<option value="58">vana: EK - eesti keele ja kultuuri instituut</option>
+<option value="2">vana: GR - germaani-romaani keelte ja kultuuride instituut</option>
+<option value="24">vana: HI - eesti humanitaarinstituut</option>
+<option value="56">vana: IF - informaatika instituut</option>
+<option value="54">vana: IN - infoteaduste instituut</option>
+<option value="66">vana: KA - kasvatusteaduste instituut</option>
+<option value="51">vana: KK - katariina kolledž</option>
+<option value="48">vana: KO - kommunikatsiooni instituut</option>
+<option value="447">vana: KR - kirjastus</option>
+<option value="76">vana: KU - kunstide instituut</option>
+<option value="118">vana: LC - keelekeskus</option>
+<option value="86">vana: ML - matemaatika ja loodusteaduste instituut</option>
+<option value="117">vana: OI - ökoloogia instituut</option>
+<option value="445">vana: PM - eesti pedagoogika arhiivmuuseum</option>
+<option value="82">vana: PS - psühholoogia instituut</option>
+<option value="46">vana: RA - rahvusvaheliste ja sotsiaaluuringute instituut</option>
+<option value="94">vana: RI - riigiteaduste instituut</option>
+<option value="105">vana: SK - slaavi keelte ja kultuuride instituut</option>
+<option value="109">vana: ST - sotsiaaltöö instituut</option>
+<option value="449">vana: TA - teadusosakond</option>
+<option value="450">vana: TK - täiendõppekeskus</option>
+<option value="381">vana: TP - pedagoogiline seminar</option>
+<option value="113">vana: TS - terviseteaduste ja spordi instituut</option>
+<option value="451">vana: TU - eesti tuleviku-uuringute instituut</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+<td class="s" colspan="36"><input type="text" name="pohivast_nimi" id="pohivast_nimi" size="40"></td>
+<td class="s" colspan="14" align="center"><input class="checkbox" type="checkbox" name="pohivast_chk" on_korr="1" id="pohivast_chk" value="jah" onclick="return true;"></td>
+<td class="s border_right" colspan="14"><input type="text" name="protsent_pohi" id="protsent_pohi" value="0" size="10" onchange="calc_procent();"></td>
+</tr>
+<tr>
+<td class="s" colspan="36" style="font-weight:bold; font-style:italic;"><nobr>vastutajad: struktuuriüksus</nobr></td>
+<td class="s" colspan="50" style="font-weight:bold; font-style:italic;"><nobr>vastutaja nimi või asutus</nobr></td>
+<td class="s border_right" colspan="14">&nbsp;</td>
+</tr>
+
+<script type="text/javascript">
+<!--
+
+         var tbl_cnt = 0;
+         function copy_row() {
+            if (tbl_cnt>0 && $("#row"+tbl_cnt).css("display")!="none"
+                  && ! $("#vast_str"+tbl_cnt).val() && ! $.trim($('input[name="asutus'+tbl_cnt+'"]').val()))
+                {alert('Ei saa lisada uut vastutajat, kuna eelmine ei ole täidetud!'); return false;}
+            var idx = tbl_cnt+1;
+            var r = $("#row_tmpl").clone(); // table row
+                r.attr("id","row"+idx);
+                r.find("select").attr("id","vast_str"+idx);
+                r.find("select").attr("name","vast_str"+idx);   
+                
+            var a = r.find("input[name='asutus']"); // input "asutus"
+                a.attr("name","asutus"+idx);   
+                a.attr("id","asutus"+idx);  
+                
+                a = r.find("a");
+                $(a).attr("indeks",idx);                                
+            
+            var p = r.find("input[name='protsent']"); // input protsent
+                p.attr("value","0");
+                p.attr("name","protsent"+idx);
+                p.attr("id","protsent"+idx);
+            
+            var l = r.find("input[name='vast_chk']"); // input vast_chk
+                l.attr("value","jah");
+                l.attr("name","vast_chk"+idx);
+                l.attr("id","vast_chk"+idx);    
+
+            r.find("input[name='vast_id']").attr("name","vast_id"+idx);
+            
+            if (tbl_cnt>0) { 
+              var kuhu = $("#row"+tbl_cnt);                                   
+              kuhu.after(r); }
+            else {
+              var kuhu = $("#row_tmpl");                                   
+              kuhu.before(r); }
+            
+            r.find("select").combobox();
+            r.show();  
+            tbl_cnt=tbl_cnt+1;                         
+         }
+        function clear_vast(obj) { 
+        var idx = $(obj).attr("indeks"); 
+        var vastutaja = $("select#vast_str"+idx+" option:selected").html();
+           if ($("#vast_str"+idx).val()) vastutaja=vastutaja+"; ";
+               vastutaja=vastutaja+$("#asutus"+idx).val();  
+           if (confirm('Kas oled kindel, et soovid vastutajat "'+vastutaja+'" õppekavast eemaldada?'))
+            {
+        $("#vast_str"+idx).val("");
+        $("#asutus"+idx).attr("value","");
+        $("#protsent"+idx).attr("value","0");
+         calc_procent();
+        $("#row"+idx).hide();
+            }
+        }   
+      
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+tbl_cnt=0; 
+//-->
+</script>
+<tr id="row_tmpl" style="display:none">
+<input type="hidden" name="vast_id" id="vast_id" value="">
+<td class="s" colspan="36"><div class="ui-widget"><select class="combo-350 ht" name="vast_str" id="vast_str">
+<option value=""> </option>
+<option value="630">AY - avatud akadeemia</option>
+<option value="52">CI - Konfutsiuse instituut</option>
+<option value="5004">DT - digitehnoloogiate instituut</option>
+<option value="5001">FK - Balti filmi, meedia ja kunstide instituut</option>
+<option value="13">HK - Haapsalu kolledž</option>
+<option value="5000">HR - haridusteaduste instituut</option>
+<option value="5003">HT - humanitaarteaduste instituut</option>
+<option value="5005">LT - loodus- ja terviseteaduste instituut</option>
+<option value="20">RK - Rakvere kolledž</option>
+<option value="5002">YK - ühiskonnateaduste instituut</option>
+<option value="446">IK - haridusinnovatsiooni keskus</option>
+<option value="442">OP - e-õppe keskus</option>
+<option value="441">PO - personaliosakond</option>
+<option value="37">vana: AI - ajaloo instituut</option>
+<option value="132">vana: AK - õigusakadeemia</option>
+<option value="444">vana: AO - arendusosakond</option>
+<option value="443">vana: AR - akadeemiline raamatukogu</option>
+<option value="5120">vana: AV - avatud akadeemia</option>
+<option value="42">vana: BF - Balti filmi- ja meediakool</option>
+<option value="35">vana: DI - eesti demograafia instituut</option>
+<option value="58">vana: EK - eesti keele ja kultuuri instituut</option>
+<option value="2">vana: GR - germaani-romaani keelte ja kultuuride instituut</option>
+<option value="24">vana: HI - eesti humanitaarinstituut</option>
+<option value="56">vana: IF - informaatika instituut</option>
+<option value="54">vana: IN - infoteaduste instituut</option>
+<option value="66">vana: KA - kasvatusteaduste instituut</option>
+<option value="51">vana: KK - katariina kolledž</option>
+<option value="48">vana: KO - kommunikatsiooni instituut</option>
+<option value="447">vana: KR - kirjastus</option>
+<option value="76">vana: KU - kunstide instituut</option>
+<option value="118">vana: LC - keelekeskus</option>
+<option value="86">vana: ML - matemaatika ja loodusteaduste instituut</option>
+<option value="117">vana: OI - ökoloogia instituut</option>
+<option value="445">vana: PM - eesti pedagoogika arhiivmuuseum</option>
+<option value="82">vana: PS - psühholoogia instituut</option>
+<option value="46">vana: RA - rahvusvaheliste ja sotsiaaluuringute instituut</option>
+<option value="94">vana: RI - riigiteaduste instituut</option>
+<option value="105">vana: SK - slaavi keelte ja kultuuride instituut</option>
+<option value="109">vana: ST - sotsiaaltöö instituut</option>
+<option value="449">vana: TA - teadusosakond</option>
+<option value="450">vana: TK - täiendõppekeskus</option>
+<option value="381">vana: TP - pedagoogiline seminar</option>
+<option value="113">vana: TS - terviseteaduste ja spordi instituut</option>
+<option value="451">vana: TU - eesti tuleviku-uuringute instituut</option>
+</select></div>
+</td><td class="s border_right" colspan="36"><input type="text" name="asutus" id="asutus" size="40">&nbsp;<a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" onclick="clear_vast(this); return false;" indeks=""><nobr><img src="./TOIS_TOPPEKAVA_files/ikoon_kustuta.gif" alt="puhasta" title="puhasta" border="0"></nobr></a></td>
+<td class="s" colspan="14" align="center"><input class="checkbox" type="checkbox" name="vast_chk" id="vast_chk" value="jah" onclick="return true;"></td>
+<td class="s border_right" colspan="14"><input type="text" name="protsent" id="protsent" value="0" size="10" onchange="calc_procent();"></td>
+</tr>
+<tr>
+<td colspan="1"><a href="https://ois.tlu.ee/pls/portal/#" onfocus="window.status=&#39;&#39;;return true;" onmouseover="window.status=&#39;&#39;;return true;" onmouseout="window.status=&#39;&#39;;return true;" onmousedown="return false;" onclick="copy_row();return false;"><nobr>&nbsp;&nbsp;<img src="./TOIS_TOPPEKAVA_files/ikoon_uus.gif" alt="lisa" title="lisa" width="11" height="13" border="0"></nobr></a></td>
+<td colspan="85" align="right" style="font-weight:bold">kokku:&nbsp;</td>
+<td class="s border_right" colspan="14"><input type="text" name="prots_kokku" disabled="disabled" id="prots_kokku" value="0" size="10"></td>
+</tr>
+
+<script type="text/javascript">
+<!--
+calc_procent();
+//-->
+</script>
+<tr>
+<td class="s1 bold" colspan="19">TÕK on tellitav kursus<br><span style="font-size:10;font-style:italic;font-weight:bold;color:#555">(täiendusõppe õppekava kuvatakse veebis tellitavate kursuste alt)</span></td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#kas_tellitav" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#kas_tellitav" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divkas_tellitav" name="divkas_tellitav"><select id="kas_tellitav" class="combo-20 ht" name="kas_tellitav" onchange="tokChange();" style="display: none;">
+<option value="jah">jah</option>
+<option value="ei">ei</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-20 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19">veebis kuvatav korraldaja üksus,  nimi, telefon, e-post<span tok="1" style="color: red">*</span></td>
+<td class="s" colspan="25"><script>$(function() {
+        $( "#korr_str_id" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#korr_str_id" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divkorr_str_id" name="divkorr_str_id"><select id="korr_str_id" class="combo-350 ht" name="korr_str_id" style="display: none;">
+<option value=""> </option>
+<option value="5001">Balti filmi, meedia ja kunstide instituut</option>
+<option value="13">Haapsalu kolledž</option>
+<option value="52">Konfutsiuse instituut</option>
+<option value="20">Rakvere kolledž</option>
+<option value="630">avatud akadeemia</option>
+<option value="5004">digitehnoloogiate instituut</option>
+<option value="5000">haridusteaduste instituut</option>
+<option value="5003">humanitaarteaduste instituut</option>
+<option value="5005">loodus- ja terviseteaduste instituut</option>
+<option value="5002">ühiskonnateaduste instituut</option>
+<option value="442">e-õppe keskus</option>
+<option value="446">haridusinnovatsiooni keskus</option>
+<option value="441">personaliosakond</option>
+<option value="42">vana: Balti filmi- ja meediakool</option>
+<option value="37">vana: ajaloo instituut</option>
+<option value="443">vana: akadeemiline raamatukogu</option>
+<option value="444">vana: arendusosakond</option>
+<option value="5120">vana: avatud akadeemia</option>
+<option value="35">vana: eesti demograafia instituut</option>
+<option value="24">vana: eesti humanitaarinstituut</option>
+<option value="58">vana: eesti keele ja kultuuri instituut</option>
+<option value="445">vana: eesti pedagoogika arhiivmuuseum</option>
+<option value="451">vana: eesti tuleviku-uuringute instituut</option>
+<option value="2">vana: germaani-romaani keelte ja kultuuride instituut</option>
+<option value="56">vana: informaatika instituut</option>
+<option value="54">vana: infoteaduste instituut</option>
+<option value="66">vana: kasvatusteaduste instituut</option>
+<option value="51">vana: katariina kolledž</option>
+<option value="118">vana: keelekeskus</option>
+<option value="447">vana: kirjastus</option>
+<option value="48">vana: kommunikatsiooni instituut</option>
+<option value="76">vana: kunstide instituut</option>
+<option value="86">vana: matemaatika ja loodusteaduste instituut</option>
+<option value="381">vana: pedagoogiline seminar</option>
+<option value="82">vana: psühholoogia instituut</option>
+<option value="46">vana: rahvusvaheliste ja sotsiaaluuringute instituut</option>
+<option value="94">vana: riigiteaduste instituut</option>
+<option value="105">vana: slaavi keelte ja kultuuride instituut</option>
+<option value="109">vana: sotsiaaltöö instituut</option>
+<option value="449">vana: teadusosakond</option>
+<option value="113">vana: terviseteaduste ja spordi instituut</option>
+<option value="450">vana: täiendõppekeskus</option>
+<option value="132">vana: õigusakadeemia</option>
+<option value="117">vana: ökoloogia instituut</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-350 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+
+<script type="text/javascript">
+<!--
+tokChange();
+//-->
+</script>
+<td class="s" colspan="56"><input type="text" name="korr_kontakt" style="width:100%" "="" id="korr_kontakt" size="30"></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19" valign="top">veebis kuvatav koolitaja</td>
+<td class="s" colspan="81"><input type="text" name="veeb_kuv_koolitaja" id="veeb_kuv_koolitaja" size="65" maxlength="255"></td>
+</tr>
+<tr>
+<td class="s1 bold" colspan="19">TÕK on teistele nähtav</td>
+<td class="s" colspan="81"><script>$(function() {
+        $( "#kas_nahtav" ).combobox();
+        $( "#toggle" ).click(function() {
+            $( "#kas_nahtav" ).toggle();
+        });
+    });
+    </script><div class="ui-widget" id="divkas_nahtav" name="divkas_nahtav"><select id="kas_nahtav" class="combo-20 ht" name="kas_nahtav" style="display: none;">
+<option value="jah">jah</option>
+<option value="ei">ei</option>
+</select><span class="ui-combobox"><input class="ui-combobox-input ui-autocomplete-input ui-widget ui-widget-content ui-corner-left combo-20 ht" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"><a tabindex="-1" title="Show All Items" class="ui-button ui-widget ui-state-default ui-button-icon-only ui-corner-right ui-combobox-toggle" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span class="ui-button-text"></span></a></span></div></td>
+</tr>
+
+<script type="text/javascript">
+<!--
+
+             $("span[keel='EN']").html(""); 
+             Eng=false;        
+         
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+
+            $("span[keel='RU']").html("");
+             Rus=false;         
+        
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+
+         cb_kontaktEvent(); cb_iseEvent(); cb_praktEvent(); 
+         
+         showKoostTyyp();
+     
+//-->
+</script>
+
+<script type="text/javascript">
+<!--
+
+            isced_on=0;
+            $("#td_isced").find("span").html("");  
+         
+//-->
+</script>
+<tr>
+<td colspan="100" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="100"><table cellspacing="0" cellpadding="0" class="tabel">
+<tbody><tr><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0" width="1%"></td><td style="height:0; padding:0"></td></tr>
+
+<tr>
+
+<td colspan="1" align="left"><input class="nupp" type="button" name="button1" id="button1" value="SALVESTA" onclick="submitting=true;if(validate()){p_action.value=&#39;ins&#39;;p_close.value=0;fSubmit(this.form);if(!doSubmit)return true; disableButton(this); return true;}submitting=false;"></td>
+<td colspan="1" align="left"><input class="nupp" type="button" name="button2" id="button2" value="Taasta" onclick="location.reload(true);"></td><td colspan="1" id="btn_kopeeri"><input class="nupp" type="button" name="button4" id="button4" value="Kopeeri õppekava" onclick="if (confirm(&#39;Kas oled kindel, et soovid kopeerida selle õppekava?\n(vormi muudetud andmed salvestatakse)&#39;)) {if (validate()) {document.spinnoForm.p_action.value=&#39;kopeeri&#39;;document.spinnoForm.submit();disableButton(this); }} return false;"></td>
+<td colspan="1" align="left"><input class="nupp" type="button" name="button3" id="button3" value="Tagasi" onclick="document.spinnoForm.p_action.value=&#39;cancel&#39;;document.spinnoForm.submit();disableButton(this);  return true;"></td>
+
+</tr>
+</tbody></table></td>
+</tr>
+<tr>
+
+<script type="text/javascript">
+<!--
+
+               var td_btn = $("#btn_kopeeri"); 
+               var td_taas = $("input[value='Taasta']").parent(); 
+               var td_back = $("input[value='Tagasi']").parent();
+               td_taas.after(td_btn);
+//-->
+</script>
+</tr></tbody></table></div></form></td></tr><tr><td width="4"><img src="./TOIS_TOPPEKAVA_files/pobtrans.gif" border="0" height="1" width="4" alt=""></td></tr>
+<tr>
+<td colspan="3" width="100%"><img src="./TOIS_TOPPEKAVA_files/pobtrans.gif" border="0" height="4" alt=""></td>
+</tr>
+</tbody></table><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><!-- Page Metadata Generated On: 13-JUN-2022:09:13:22  Invalidated On: 02-DEC-2021:02:29:19  Invalidated By User: <BASE>  Time Taken: 20 msecs -->
+
+
+<ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul><ul class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all" role="listbox" aria-activedescendant="ui-active-menuitem" style="z-index: 1; top: 0px; left: 0px; display: none;"></ul></body></html>

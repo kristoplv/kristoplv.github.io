@@ -1,0 +1,240 @@
+html{
+    font-family: "Times New Roman",Times,Georgia,serif;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+.oppekava{
+    display: flex;
+    flex-direction: column;
+}
+th{
+    font-weight: normal;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.671);
+    text-align: left;
+    padding: 20px;
+    padding-right: 40px;
+}
+.box{
+    background-color: #ba0c2f;
+    font-size: 32px;
+    padding-left: 25px;
+    font-style: italic;
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 2px;
+    cursor: pointer;
+    transition: 200ms;
+}
+.box:hover{
+    background-color: #99112c;
+}
+.box>p{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+}
+.fillForm{
+    padding-left: 25px;
+    background-color: #eaeaea;
+    border: 1px solid black;
+    margin-bottom: 30px;
+}
+.formInput{
+    font-size: 24px;
+    max-width: 100%;
+}
+th label{
+    font-size: 20px;
+}
+.formInputDropdown{
+    font-size: 16px;
+    font-family: "Times New Roman",Times,Georgia,serif;
+    letter-spacing: 1px;
+}
+#filler{
+    width: 10vw;
+    height: 2vh;
+    font-size: 28px;
+}
+#taitja{
+    font-size: 2.5vh;
+}
+
+#divv1{
+    transition: all 2s ease-in-out;
+}
+#table1, #table2, #table3, #table4 {
+    animation-name: animatsioon;
+    animation-duration: 0.5s;
+}
+
+#mainArea{
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 80vw;*/
+    height: inherit;
+}
+.newsArea{
+    margin-right: 50px;
+}
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: help;
+}
+[data-tooltip]:before, [data-tooltip]:after {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+}
+span{
+    color: #75142cc4;
+}
+.required{
+    color: #ba0c2f;
+}
+.emptyError{
+    border: 2px solid #ba0c2f;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    border-width: 2px !important;
+}
+.emptyErrorText, #table1-error>th, #table2-error>th, #table3-error>th, #table4-error>th,
+#table1-error-eng>th, #table2-error-eng>th, #table3-error-eng>th, #table4-error-eng>th{
+    color: #ba0c2f;
+    font-weight: 600;
+    text-shadow: 1px 1px 20px rgba(0,0,0,0.3);
+}
+input[type="text"], select, textarea, input:disabled, input[type="number"], input{
+    border-width: 1px;
+    border-radius: 3px;
+}
+
+
+@keyframes animatsioon{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+.formBtn {
+    width: 20%;
+    font-size: 24px;
+}
+.End{
+    margin-right: 1em;
+    height: 2em;
+    width: 22%;
+    font-size: 1.2vw;
+    background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 1%, white);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    color: black;
+    font-style: italic;
+    animation-name: flushButton_out;
+    animation-duration: 300ms;
+}
+.End:hover{
+    animation-name: flushButton_in;
+    animation-duration: 300ms;
+    background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 100%, white);
+}
+
+@keyframes flushButton_in{
+    0%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 1%, white 99%);
+    }10%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 10%, white);
+    }20%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 20%, white);
+    }30%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 30%, white);
+    }40%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 40%, white);
+    }50%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 50%, white);
+    }60%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 60%, white);
+    }70%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 70%, white);
+    }80%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 80%, white);
+    }
+    90%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 90%, white);
+    }
+    100%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 100%, white);
+    }
+}
+@keyframes flushButton_out{
+    100%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 1%, white);
+    }90%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 10%, white);
+    }80%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 20%, white);
+    }70%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 30%, white);
+    }60%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 40%, white);
+    }50%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 50%, white);
+    }40%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 60%, white);
+    }30%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 70%, white);
+    }20%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 80%, white);
+    }
+    10%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 90%, white);
+    }
+    1%{
+        background: linear-gradient(to right, rgba(116, 32, 32, 0.295) 100%, white);
+    }
+}

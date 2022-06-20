@@ -1,0 +1,91 @@
+.menu-text{
+    font-family: "Times New Roman",Times,Georgia,serif;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+}
+.a:visited{
+    color: black;
+    text-decoration: none;
+}
+.a{
+    text-decoration: none;
+}
+.containTheContainer{
+    display: grid;
+}
+.peidus{
+    display:none;
+    position: fixed;
+    background-color: black;
+    text-align: center;
+    grid-template-columns: 25%, 25%, 25%, 25%;
+    width: 100%;
+    aspect-ratio: 4.5/1;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(60%);
+    transition: 300ms;}
+.nahtaval{
+    transition: 300ms;
+    display:grid;
+    position: fixed;
+    background-color: black;
+    text-align: center;
+    grid-template-columns: 25%, 25%, 25%, 25%;
+    width: 100%;
+    aspect-ratio: 4.5/1;
+    z-index: 10;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(60%);
+}
+
+.ribbon{
+    width: 100%;
+    aspect-ratio: 8/1;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgb(235, 235, 235);
+    display: grid;
+    grid-template-columns: 90% 10%;
+    /*grid-template-rows: 100px 100px 100px;*/
+    box-shadow: 0px 2px 30px rgba(0, 0,0, 0.7);
+}
+.item{
+    margin: none;
+    background-color: white;
+    text-indent: 0.5em;
+    border-right: 0.1vw solid black;
+    transition: 300ms;
+    box-shadow: 1px 1px 5px black;
+
+}
+
+.home_logo{
+    background-image: url("../images/TOISlogo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: white;
+    border-right: 0.1vw solid black;
+}
+#Logo:hover{
+    background-color: white;
+}
+
+.item:hover{
+    transition: 300ms;
+    background-color: #dddddd
+}
+.sides{
+    font-size: 1.25vw;
+    font-style: italic;
+}
+#formList{
+    position: inherit;
+    width: 100%;
+    aspect-ratio: 2.2/1;
+}

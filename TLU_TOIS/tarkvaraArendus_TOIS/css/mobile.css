@@ -1,0 +1,118 @@
+
+@media (max-width: 1000px){
+    .field{
+        font-size: 1.5vh;
+    }
+    #mainContainer{
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0px 0px 0px;
+    }
+    html{
+        background: fixed;
+        border: 0;
+    }
+    th{
+        font-size: 0.95em;
+    }
+    .links > a{
+        font-size: 0.9em;
+    }
+    /* .number{
+        display: none;
+    } */
+    .search{
+        position: absolute;
+        margin-top: 3em;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        font-size: 24px;
+    }
+    #searchinput{
+        font-size: 1.5em;
+        margin-top: 1em;
+        width: 80%;
+    }
+    #formList{
+        margin-top: 10em;
+    }
+    .btn{
+        height: 50px;
+        width: 70%;
+        font-size: 2vw;
+    }
+    .login_txt{
+        margin: 0;
+        border: 0;
+        padding: 0;
+        font-family: "Times New Roman",Times,Georgia,serif;
+        font-style:italic;
+        letter-spacing: 0.05em;
+        font-size: 1.8vh;
+    }
+    .login_form{
+        margin-top: 10vmin;
+        height: 85vmin;
+        min-width: 65vmin;
+        max-width: 80vmin;
+    }
+    a:visited{
+        color: #922b2b;
+        text-decoration: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .ribbon{
+        z-index: 10;
+        display: grid;
+    }
+    #loginArea, #fillerMain, #sidebar, .logo{
+        display: none;
+    }
+    .menu-text{
+        font-size: 1em;
+    }
+    .ribbon{
+        grid-template-columns: 85% 15%;
+        text-align: right;
+    }
+    .menuBtn{
+        background-image: url("../images/menuBtn.png");
+        background-repeat: no-repeat;
+        background-size: 2em 2em;
+        background-position: center;
+        cursor: pointer;
+        transition: 300ms;
+    }
+    .menuBtn:hover{
+        transition: 300ms;
+        transform: rotate(90deg);
+    }
+    #newsArea{
+        position: absolute;
+        top: -50px;
+        left: 0;
+        margin-top: 10em;
+        width: 100%;
+        padding: 0;
+    }
+    p, .newsLink{
+        font-size: 4em;
+    }
+    .sidebar{
+        display: none;
+    }
+}
+@media (min-width: 1000px){
+    .ribbon{
+        display: none;
+    }
+    #loginArea, #fillerMain, #sidebar{
+        display: show;
+    }
+}

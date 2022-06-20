@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ee">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TLÜ TÕIS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="icon" href="images/toisFavicon.png" type="image/x-icon">
+    <script src="js/loginStatus.js" defer></script>
+    <script src="js/ribbon.js" defer></script>
+    <script type="module" src="js/navigation.js" defer></script>
+    <script type="module" src="js/lang.js" defer></script>
+    <script type="module" src="js/loginStatus.js" defer></script>
+</head>
+<body>
+    <div id="mainContainer" class="mainContainer">
+        <div id="fillerMain" class="fillerMain"></div>
+        <!-- <div id="fillerTop" class="fillerTop"></div> -->
+        <a href="mainEng.html" class="logo"></a>
+        
+        <div id="loginArea" class="login" >
+            <div id="welcomePlaceholder"></div>              
+            <a href="loginEng.html" class="loginButton" id="logIn">Log in</a>
+        </div>
+
+        <div id="sidebar" class="sidebar">
+            <h2 class="menuLabel">MENU</h2>
+            <ul id="navMenu" class="navMenu">
+                <li>
+                    <a href="mainEng.html" class="links sides" id="homePage">Home page</a>
+                </li>
+                <li>
+                    <a href="oppekavadEng.html" class="links sides" id="allForms">All curricula</a>
+                </li>
+                <li>
+                    <a href="uusoppekavaEng.html" class="links sides" id="newForm">Create a new curriculum</a>
+                </li>
+                <a href="main.html"><img src="images/eestilipp.png" id="langEE" title="Eesti keel" class="estFlag"></a>
+                <a href="mainEng.html"><img src="images/uklipp.png" id="langEN" title="Inglise keel" class="ukFlag"></a>
+            </ul>
+        </div>
+
+        
+            
+            <container class="ribbon">
+                <a class="home_logo item a" id="Logo" href="index.html"><p class="menu-text"></p></a>
+                <div class="menuBtn" id="menu"></div>
+            </container>
+            <div class="peidus" id="dropped">
+                <p1 class="item login_txt"><a href="mainEng.html">Home page</a></p1>
+                <p1 class="item login_txt"><a href="oppekavadEng.html">All curricula</a></p1>
+                <p1 class="item login_txt"><a href="uusoppekavaEng.html">Create a new curriculum</a></p1>
+                <p1 class="item login_txt"><a href="loginEng.html">Log in</a></p1>
+            </div>
+        
+        
+        <div id="mainArea" class="mainArea">
+            <div id="newsArea" class="mainContentArea">
+                <h2 class="notifications">Notifications</h2>
+                <div id="news1" class="news">
+                    <div id="date1">
+                        <p>08.06.2022</p>
+                    </div>
+                    <div id="newsContent1" class="newsContent">
+                        <p>Õppekavas x on tehtud muudatused</p>
+                        <a href="" class="newsLink">Vaata</a>
+                    </div>
+                </div>
+                <hr>
+                <div id="news2" class="news">
+                    <div id="date2">
+                        <p>07.06.2022</p>
+                    </div>
+                    <div id="newsContent2" class="newsContent">
+                        <p>Õppekava x vorm on valmis kontrollimiseks</p>
+                        <a href="" class="newsLink">Vaata</a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div id="fillerMain" class="fillerMain"></div>
+
+    </div>
+    
+</body>
+</html>
