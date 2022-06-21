@@ -11,6 +11,9 @@
     #mainArea{
         width: 200%;
     }
+    td{
+        font-size: 1em;
+    }
     .okHead{
         margin-top: 4em;
     }
