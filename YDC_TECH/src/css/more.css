@@ -13,6 +13,7 @@
     background-color: white;
 }
 .about-cont{
+    position: absolute;
     top: 98%;
     left: 0;
     width: 100%;
