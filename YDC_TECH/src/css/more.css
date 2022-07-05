@@ -20,3 +20,14 @@
     height: 85%;
     background-color: white;
 }
+.about-table{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+.about-table>tr{
+    text-align: center;
+}
+.about-table>td{
+    text-align: center;
+}
