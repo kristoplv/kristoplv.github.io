@@ -12,3 +12,11 @@ html{
     padding:0;
     position: absolute;
 }
+.home{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
