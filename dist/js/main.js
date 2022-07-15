@@ -24,7 +24,7 @@ const material_2 = new THREE.MeshStandardMaterial( { color: 0x8b0000, wireframe:
 const torus_1 = new THREE.Mesh(geometry_2, material_2);
 
 
-const logoTexture = new THREE.TextureLoader().load("../pics/py.png");
+const logoTexture = new THREE.TextureLoader().load("./pics/py.png");
 const pyLogo = new THREE.Mesh(
   new THREE.PlaneGeometry( 3, 3 ),
   new THREE.MeshStandardMaterial({
@@ -36,7 +36,7 @@ pyLogo.position.z = 20;
 pyLogo.position.x = 10;
 pyLogo.position.y = 10;
 
-const cssTexture = new THREE.TextureLoader().load("../pics/css.png");
+const cssTexture = new THREE.TextureLoader().load("./pics/css.png");
 const cssLogo = new THREE.Mesh(
   new THREE.PlaneGeometry( 3, 3 ),
   new THREE.MeshStandardMaterial({
@@ -48,7 +48,7 @@ cssLogo.position.z = 25;
 cssLogo.position.x = -15;
 cssLogo.position.y = 10;
 
-const jsTexture = new THREE.TextureLoader().load("../pics/js.png");
+const jsTexture = new THREE.TextureLoader().load("./pics/js.png");
 const jsLogo = new THREE.Mesh(
   new THREE.PlaneGeometry( 3, 3 ),
   new THREE.MeshStandardMaterial({
@@ -60,8 +60,8 @@ jsLogo.position.z = 20;
 jsLogo.position.x = -10;
 jsLogo.position.y = -10;
 
-const sunDepth = new THREE.TextureLoader().load("../pics/sund.jpg");
-const sunMaterial = new THREE.TextureLoader().load("../pics/sun.png");
+const sunDepth = new THREE.TextureLoader().load("./pics/sund.jpg");
+const sunMaterial = new THREE.TextureLoader().load("./pics/sun.png");
 const icoLogo = new THREE.Mesh(
   new THREE.SphereGeometry( 2, 32, 32 ),
   new THREE.MeshBasicMaterial({
@@ -73,7 +73,7 @@ icoLogo.position.z = 0;
 icoLogo.position.x = 0;
 icoLogo.position.y = 0;
 
-const tluTexture = new THREE.TextureLoader().load("../pics/tlu.png");
+const tluTexture = new THREE.TextureLoader().load("./pics/tlu.png");
 const tluLogo = new THREE.Mesh(
   new THREE.BoxGeometry( 3, 3, 3 ),
   new THREE.MeshStandardMaterial({
@@ -85,7 +85,7 @@ tluLogo.position.z = 72;
 tluLogo.position.x = 10;
 tluLogo.position.y = 5;
 
-const dtiTexture = new THREE.TextureLoader().load("../pics/dti.png");
+const dtiTexture = new THREE.TextureLoader().load("./pics/dti.png");
 const dtiLogo = new THREE.Mesh(
   new THREE.BoxGeometry( 2, 2, 2 ),
   new THREE.MeshStandardMaterial({
@@ -106,7 +106,7 @@ const lightHelp = new THREE.PointLightHelper(pointLight);
 
 const grid = new THREE.GridHelper(200, 50);
 
-const earthTexture = new THREE.TextureLoader().load("../pics/earth.jpg");
+const earthTexture = new THREE.TextureLoader().load("./pics/earth.jpg");
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -131,7 +131,7 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load("../pics/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("./pics/space.jpg");
 scene.background = spaceTexture;
 
 scene.add(icoLogo);
