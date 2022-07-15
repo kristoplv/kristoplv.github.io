@@ -65,9 +65,9 @@ html{
     left:0;
     width: 100%;
     height: 40%;
-    background-image: url("../pics/filler.png");
+    background-image: url("../pics/filler2.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .about{
     z-index: 3;
