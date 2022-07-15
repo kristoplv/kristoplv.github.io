@@ -107,6 +107,13 @@ html{
             rgb(102, 6, 119)
         ) 2 100%;
 }
+.about-text>p{
+    font-size:32px;
+    font-family: orb_regular;
+    color:white;
+    letter-spacing: 2px;
+
+}
 .about-picture{
     position:relative;
     top: -50%;
