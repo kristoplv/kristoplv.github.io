@@ -67,7 +67,7 @@ html{
     height: 60%;
     background-image: url("../pics/filler3.png");
     background-repeat: no-repeat;
-    background-size: 100% 55%;
+    background-size: 100% 100%;
 }
 .about{
     z-index: 3;
