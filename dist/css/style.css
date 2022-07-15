@@ -26,12 +26,12 @@ html{
     border-image: 
         linear-gradient(
             to bottom,
-            rgba(139, 0, 0, 1),
-            rgba(48, 25, 52, 1)
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
         ) 2 100%;
 }
 .home>p{
-    font-size:82px;
+    font-size: 102px;
     font-family: orb_bold;
     color:white;
     letter-spacing: 3px;
@@ -56,6 +56,68 @@ html{
     background-size: contain;
     background-color: rgba(0, 0, 0, 0);
 }
+.filler{
+    position: absolute;
+    top: 80%;
+    left:0;
+    width: 100%;
+    height: 40%;
+    color: white;
+}
+.about{
+    position: absolute;
+    top: 120%;
+    left:0;
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+}
+
+.about-text{
+    position:relative;
+    top: 10%;
+    left: 10%;
+    width: 60%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
+}
+.about-picture{
+    position:relative;
+    top: 10%;
+    left: 80%;
+    width: 20%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @font-face {
     font-family: orb_regular;
     src: url("../pics/orb_reg.ttf");
