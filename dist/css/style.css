@@ -41,8 +41,8 @@ html{
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 5em;
-    height: 5em;
+    width: 10em;
+    height: 10em;
     background-image: url("../pics/fieldwater.png");
     background-repeat: no-repeat;
     background-size: contain;
