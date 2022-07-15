@@ -120,7 +120,9 @@ html{
     left: 70%;
     width: 25%;
     height: 78%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url("../pics/ausalt_kristo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     border-width: 3px;
     border-style: solid;
     border-image: 
