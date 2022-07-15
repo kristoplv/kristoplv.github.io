@@ -21,15 +21,15 @@ html{
     transform: translateX(-50%);
     width: 80%;
     height: 70%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-width: 3px;
     border-style: solid;
     border-image: 
         linear-gradient(
-            to right,
+            to bottom,
             rgb(194, 11, 11),
             rgb(102, 6, 119)
-        ) 2 100%;
+        ) 1 100%;
 }
 .home>p{
     font-size: 102px;
@@ -83,7 +83,7 @@ html{
     left: 5%;
     width: 50%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-width: 3px;
     border-style: solid;
     border-radius: 5px 0px 5px 5px;
@@ -100,7 +100,7 @@ html{
     left: 70%;
     width: 20%;
     height: 90%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-width: 3px;
     border-style: solid;
     border-image: 
