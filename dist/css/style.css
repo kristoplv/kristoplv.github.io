@@ -32,14 +32,14 @@ html{
 }
 .home>p{
     font-size:82px;
-    font-family:url("../pics/orb_bold.ttf");
+    font-family: orb_bold;
     color:white;
     letter-spacing: 3px;
     font-style: italic;
 }
 .home>p1{
     font-size:42px;
-    font-family:url("../pics/orb_reg.ttf");
+    font-family: orb_regular;
     color:white;
     letter-spacing: 2px;
     font-style: italic;
@@ -55,4 +55,12 @@ html{
     background-repeat: no-repeat;
     background-size: contain;
     background-color: rgba(0, 0, 0, 0);
+}
+@font-face {
+    font-family: orb_regular;
+    src: url("../pics/orb_reg.ttf");
+}
+@font-face {
+    font-family: orb_bold;
+    src: url("../pics/orb_bold.ttf");
 }
