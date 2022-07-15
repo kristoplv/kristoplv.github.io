@@ -15,9 +15,9 @@ html{
 .home{
     position: absolute;
     top: 15%;
-    left: 10%;
+    left: 5%;
     width: 80%;
-    height: 60%;
+    height: 70%;
     background-color: rgba(255, 255, 255, 0.3);
 }
 .home>p{
