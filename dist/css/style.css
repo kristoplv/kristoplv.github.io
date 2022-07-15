@@ -26,9 +26,9 @@ html{
     border-image: 
         linear-gradient(
             to bottom,
-            red,
-            rgba(0, 0, 0, 0)
-        ) 1 100%;
+            rgba(139, 0, 0, 1),
+            rgba(48, 25, 52, 1)
+        ) 2 100%;
 }
 .home>p{
     font-size:82px;
