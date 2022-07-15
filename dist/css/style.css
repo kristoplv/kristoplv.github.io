@@ -21,7 +21,7 @@ html{
     transform: translateX(-50%);
     width: 80%;
     height: 70%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     border-width: 3px;
     border-style: solid;
     border-image: 
@@ -83,7 +83,7 @@ html{
     left: 5%;
     width: 50%;
     height: 80%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     border-width: 3px;
     border-style: solid;
     border-image: 
@@ -99,7 +99,7 @@ html{
     left: 70%;
     width: 20%;
     height: 90%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     border-width: 3px;
     border-style: solid;
     border-image: 
