@@ -25,7 +25,7 @@ html{
     border-style: solid;
     border-image: 
         linear-gradient(
-            to-bottom,
+            to bottom,
             red,
             rgba(0, 0, 0, 0)
         ) 1 100%;
