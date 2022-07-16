@@ -133,6 +133,17 @@ html{
             rgb(102, 6, 119)
         ) 2 100%;
 }
+.hidden{
+    opacity:0;
+}
+.show-text{
+    animation-name: show-text;
+    animation-duration: 3s;
+}
+.show-pic{
+    animation-name: show-pic;
+    animation-duration: 5s;
+}
 
 
 
@@ -145,7 +156,28 @@ html{
 
 
 
-
+@keyframes show-text{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes show-pic {
+    0%{
+        opacity:0;
+        width: 0%;
+    }
+    60%{
+        opacity:0;
+        width:0%;
+    }
+    100%{
+        opacity: 1;
+        width: 25%;
+    }
+}
 @font-face {
     font-family: orb_regular;
     src: url("../pics/orb_reg.ttf");
