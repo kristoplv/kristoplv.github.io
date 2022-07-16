@@ -1,5 +1,5 @@
-var aboutText = document.getElementById("about-t");
-var aboutPicture = document.getElementById("ab-pic");
+const aboutText = document.getElementById("about-t");
+const aboutPicture = document.getElementById("ab-pic");
 
 var scrollToPosition = ()=>{
     var y = window.scrollY;
