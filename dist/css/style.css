@@ -134,15 +134,16 @@ html{
         ) 2 100%;
 }
 .hidden{
+    transition: 1s;
     opacity:0;
 }
 .show-text{
     animation-name: show-text;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 .show-pic{
     animation-name: show-pic;
-    animation-duration: 5s;
+    animation-duration: 3s;
 }
 
 

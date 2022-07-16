@@ -3,7 +3,7 @@ const aboutPicture = document.getElementById("ab-pic");
 
 var scrollToPosition = ()=>{
     var y = window.scrollY;
-    if(y >= 1200){
+    if(y >= 1100){
         aboutText.className = "about-text show-text";
         aboutPicture.className = "about-picture show-pic";
     } else {
