@@ -75,7 +75,7 @@ html{
     background-image: url("../pics/filler4.png");
 }
 .second>p{
-    top: 50%;
+    top: 60%;
 }
 .filler>p{
     position:relative;
@@ -156,7 +156,7 @@ html{
 .projects{
     z-index: 3;
     position: absolute;
-    top: 265%;
+    top: 325%;
     left:0;
     width: 100%;
     height: 100%;
