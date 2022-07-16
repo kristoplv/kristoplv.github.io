@@ -165,7 +165,23 @@ html{
 .tois{
     position: relative;
     top: 10%;
-    left: 20%;
+    left: 10%;
+    width: 30%;
+    height: 20%;
+    background-color: rgba(77, 12, 73, 0.432);
+}
+.chess{
+    position: relative;
+    top: 40%;
+    left: 10%;
+    width: 30%;
+    height: 20%;
+    background-color: rgba(77, 12, 73, 0.432);
+}
+.scraper{
+    position: relative;
+    top: 70%;
+    left: 10%;
     width: 30%;
     height: 20%;
     background-color: rgba(77, 12, 73, 0.432);
