@@ -168,6 +168,8 @@ html{
     left: 15%;
     width: 30%;
     height: 10%;
+    min-width: 30%;
+    min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .chess{
@@ -176,6 +178,8 @@ html{
     left: 15%;
     width: 30%;
     height: 10%;
+    min-width: 30%;
+    min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .scraper{
@@ -184,6 +188,9 @@ html{
     left: 15%;
     width: 30%;
     height: 10%;
+    
+    min-width: 30%;
+    min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .pic{
