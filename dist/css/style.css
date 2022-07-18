@@ -204,6 +204,16 @@ html{
     min-height: 20%;
     background-color: rgba(0, 0, 0, 0.432);
 }
+.pic-oth{
+    position: relative;
+    top:0;
+    left:100%;
+    transform: translateX(-50%);
+    width: 15%;
+    height: 100%;
+    background-color: aqua;
+
+}
 .second-oth{
     top: 10%;
 }
