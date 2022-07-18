@@ -166,24 +166,24 @@ html{
     position: relative;
     top: 20%;
     left: 15%;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .chess{
     position: relative;
     top: 30%;
     left: 15%;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .scraper{
     position: relative;
     top: 40%;
     left: 15%;
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .pic{
