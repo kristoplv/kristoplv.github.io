@@ -164,7 +164,7 @@ html{
 }
 .tois{
     position: relative;
-    top: 20%;
+    top: 30%;
     left: 15%;
     width: 30%;
     height: 10%;
@@ -172,7 +172,7 @@ html{
 }
 .chess{
     position: relative;
-    top: 30%;
+    top: 40%;
     left: 15%;
     width: 30%;
     height: 10%;
@@ -180,7 +180,7 @@ html{
 }
 .scraper{
     position: relative;
-    top: 40%;
+    top: 50%;
     left: 15%;
     width: 30%;
     height: 10%;
@@ -196,7 +196,7 @@ html{
 }
 .other{
     position: relative;
-    top: 20%;
+    top: 0%;
     left: 60%;
     width: 20%;
     height: 20%;
@@ -205,10 +205,10 @@ html{
     background-color: rgba(0, 0, 0, 0.432);
 }
 .second-oth{
-    top: 30%;
+    top: 10%;
 }
 .third-oth{
-    top: 40%;
+    top: 20%;
 }
 
 
