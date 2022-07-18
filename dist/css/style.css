@@ -200,8 +200,8 @@ html{
     left: 55%;
     width: 30%;
     height: 10%;
-    min-width: 20%;
-    min-height: 20%;
+    min-width: 30%;
+    min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
 .pic-oth{
