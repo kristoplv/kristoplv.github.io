@@ -194,6 +194,22 @@ html{
     height: 20%;
     background-color: aqua;
 }
+.other{
+    position: relative;
+    top: 20%;
+    left: 60%;
+    width: 20%;
+    height: 20%;
+    min-width: 20%;
+    min-height: 20%;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+.second-oth{
+    top: 30%;
+}
+.third-oth{
+    top: 40%;
+}
 
 
 
