@@ -173,6 +173,15 @@ html{
     min-width: 30%;
     min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
+    
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
 }
 .tois>p, .chess>p, .scraper>p{
     font-family: orb_regular;
@@ -192,6 +201,15 @@ html{
     min-width: 30%;
     min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
+    
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
 }
 .scraper{
     display: flex;
@@ -204,14 +222,7 @@ html{
     min-width: 30%;
     min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
-}
-.pic{
-    position: relative;
-    top:0;
-    left:0;
-    width: 15%;
-    height: 100%;
-    background: linear-gradient(45deg, red, purple);
+    
     border-width: 3px;
     border-style: solid;
     border-image: 
@@ -220,6 +231,14 @@ html{
             rgb(194, 11, 11),
             rgb(102, 6, 119)
         ) 2 100%;
+}
+.pic{
+    position: relative;
+    top:0;
+    left:0;
+    width: 15%;
+    height: 100%;
+    background: linear-gradient(45deg, red, purple);
 }
 .other{
     position: relative;
@@ -230,6 +249,14 @@ html{
     min-width: 30%;
     min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
 }
 .second-oth{
     top: 10%;
