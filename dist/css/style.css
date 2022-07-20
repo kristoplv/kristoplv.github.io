@@ -163,6 +163,8 @@ html{
     background-color: rgba(255, 255, 255, 0.5);
 }
 .tois{
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 30%;
     left: 15%;
@@ -175,11 +177,13 @@ html{
 .tois>p, .chess>p, .scraper>p{
     font-family: orb_regular;
     font-size: 18px;
-    margin-left: 10%;
+    margin-left: 15%;
     color: white;
     letter-spacing: 1px;
 }
 .chess{
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 40%;
     left: 15%;
@@ -190,6 +194,8 @@ html{
     background-color: rgba(0, 0, 0, 0.432);
 }
 .scraper{
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 50%;
     left: 15%;
