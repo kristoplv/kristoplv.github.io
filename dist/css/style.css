@@ -79,7 +79,7 @@ html{
 }
 .filler>p{
     position:relative;
-    top:35%;
+    top:45%;
     transform: translateY(-50%);
     font-size:42px;
     font-family: orb_regular;
