@@ -163,6 +163,8 @@ html{
     background-color: rgba(255, 255, 255, 0.5);
 }
 .tois{
+    transition: 250ms;
+    color: white;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -187,10 +189,11 @@ html{
     font-family: orb_regular;
     font-size: 14px;
     margin-left: 15%;
-    color: white;
     letter-spacing: 1px;
 }
 .chess{
+    transition: 250ms;
+    color: white;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -212,6 +215,8 @@ html{
         ) 2 100%;
 }
 .scraper{
+    transition: 250ms;
+    color: white;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -241,6 +246,8 @@ html{
     background: linear-gradient(45deg, red, purple);
 }
 .other{
+    transition: 250ms;
+    color: white;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -265,7 +272,6 @@ html{
     font-family: orb_regular;
     font-size: 14px;
     margin-left: 15%;
-    color: white;
     letter-spacing: 1px;
 
 }
@@ -275,6 +281,13 @@ html{
 .third-oth{
     top: 18%;
 }
+
+.tois:hover, .chess:hover, .scraper:hover, .other:hover{
+    transition: 250ms;
+    background-color: white;
+    color: black;
+}
+
 
 
 
