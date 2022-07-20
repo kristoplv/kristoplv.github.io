@@ -231,23 +231,6 @@ html{
     min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
-.pic-oth{
-    position: relative;
-    top:0;
-    left:100%;
-    transform: translateX(-100%);
-    width: 15%;
-    height: 100%;
-    background: linear-gradient(45deg, red, purple);
-    border-width: 3px;
-    border-style: solid;
-    border-image: 
-        linear-gradient(
-            to bottom,
-            rgb(194, 11, 11),
-            rgb(102, 6, 119)
-        ) 2 100%;
-}
 .second-oth{
     top: 10%;
 }
