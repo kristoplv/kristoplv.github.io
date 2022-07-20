@@ -212,6 +212,14 @@ html{
     width: 15%;
     height: 100%;
     background: linear-gradient(45deg, red, purple);
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
 }
 .other{
     position: relative;
@@ -230,8 +238,15 @@ html{
     transform: translateX(-100%);
     width: 15%;
     height: 100%;
-    background-color: aqua;
-
+    background: linear-gradient(45deg, red, purple);
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+        linear-gradient(
+            to bottom,
+            rgb(194, 11, 11),
+            rgb(102, 6, 119)
+        ) 2 100%;
 }
 .second-oth{
     top: 10%;
