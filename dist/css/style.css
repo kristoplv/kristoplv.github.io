@@ -244,7 +244,7 @@ html{
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 0%;
+    top: -2%;
     left: 55%;
     width: 30%;
     height: 10%;
