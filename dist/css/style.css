@@ -172,7 +172,7 @@ html{
     min-height: 10%;
     background-color: rgba(0, 0, 0, 0.432);
 }
-.tois>p{
+.tois>p, .chess>p, .scraper>p{
     font-family: orb_regular;
     font-size: 18px;
     margin-left: 10%;
