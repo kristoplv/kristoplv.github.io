@@ -241,6 +241,8 @@ html{
     background: linear-gradient(45deg, red, purple);
 }
 .other{
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 0%;
     left: 55%;
@@ -257,6 +259,14 @@ html{
             rgb(194, 11, 11),
             rgb(102, 6, 119)
         ) 2 100%;
+}
+.other>p{
+    font-family: orb_regular;
+    font-size: 14px;
+    margin-left: 15%;
+    color: white;
+    letter-spacing: 1px;
+
 }
 .second-oth{
     top: 10%;
